@@ -222,7 +222,8 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Booking Edge — [Business Name]</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking Edge, [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
@@ -247,13 +248,15 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
   body {
     font-family: 'Inter', -apple-system, 'SF Pro Display', sans-serif;
     font-weight: 300;
-    max-width: 960px;
-    margin: 48px auto;
-    padding: 0 24px;
+    font-size: 16px;
+    max-width: 1040px;
+    margin: 40px auto;
+    padding: 0 32px;
     color: var(--heading);
     background: var(--bg);
-    line-height: 1.5;
+    line-height: 1.55;
     font-feature-settings: "ss01";
+    -webkit-font-smoothing: antialiased;
   }
   .eyebrow {
     font-size: 11px;
@@ -272,11 +275,12 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     color: var(--heading);
   }
   .sub {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 300;
     color: var(--body);
     margin-bottom: 36px;
-    max-width: 640px;
+    max-width: 720px;
+    line-height: 1.5;
   }
   .section-label {
     display: inline-block;
@@ -329,17 +333,19 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     margin-bottom: 8px;
   }
   .platform .rating {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 300;
     color: var(--heading);
     font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
     line-height: 1;
     margin-bottom: 4px;
   }
   .platform .count {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--body);
     font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
   }
   /* Themes (Signal 1) */
   .theme {
@@ -382,9 +388,9 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     font-family: 'Source Serif 4', Georgia, serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--label);
-    line-height: 1.5;
+    line-height: 1.55;
     padding: 4px 0 4px 16px;
     border-left: 2px solid var(--accent);
     margin-top: 6px;
@@ -410,9 +416,10 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     font-weight: 400;
   }
   .gap .a {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--body);
     margin-top: 4px;
+    line-height: 1.55;
   }
   /* Parity diff (Signal 2) */
   .parity {
@@ -430,18 +437,19 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     border-bottom: 1px solid var(--border);
   }
   .parity-item {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--heading);
-    padding: 8px 0;
+    padding: 10px 0;
     border-bottom: 1px solid var(--border-soft);
-    line-height: 1.45;
+    line-height: 1.5;
   }
   .parity-item:last-child { border-bottom: none; }
   .parity-item .source {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--body);
     display: block;
-    margin-top: 2px;
+    margin-top: 4px;
+    line-height: 1.5;
   }
   /* Fixes (Signal 3) */
   .fix {
@@ -469,9 +477,10 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     line-height: 1.35;
   }
   .fix .where {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--body);
     margin-bottom: 12px;
+    line-height: 1.5;
   }
   .fix .pills {
     display: flex;
@@ -490,9 +499,9 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     font-family: 'Source Serif 4', Georgia, serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     color: var(--label);
-    line-height: 1.5;
+    line-height: 1.55;
     padding: 4px 0 4px 14px;
     border-left: 2px solid var(--border);
     margin-top: 4px;

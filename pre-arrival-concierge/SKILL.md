@@ -215,12 +215,13 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     font-family: 'Inter', -apple-system, sans-serif;
     font-feature-settings: "ss01";
     font-weight: 300;
-    max-width: 1040px;
-    margin: 48px auto;
+    font-size: 16px;
+    max-width: 1080px;
+    margin: 40px auto;
     padding: 0 32px;
     color: var(--heading);
     background: var(--bg);
-    line-height: 1.5;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
   .eyebrow {
@@ -244,8 +245,8 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     font-weight: 300;
     color: var(--body);
     margin: 0 0 56px;
-    max-width: 680px;
-    line-height: 1.45;
+    max-width: 760px;
+    line-height: 1.55;
   }
   .section-label {
     font-size: 11px;
@@ -292,24 +293,24 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     margin: 0 auto;
   }
   .upsell-row .vector {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--heading);
-    line-height: 1.35;
+    line-height: 1.4;
   }
   .upsell-row .what {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--body);
-    line-height: 1.5;
+    line-height: 1.55;
   }
   .upsell-row .what .hook {
     display: block;
-    margin-top: 6px;
+    margin-top: 8px;
     font-family: 'Source Serif 4', Georgia, serif;
     font-style: italic;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--label);
-    line-height: 1.5;
+    line-height: 1.55;
   }
   .upsell-row .meta {
     font-size: 11px;
@@ -349,14 +350,15 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
   }
   .anxiety-row:last-child { border-bottom: none; }
   .anxiety-row .name {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--heading);
     font-weight: 400;
+    line-height: 1.45;
   }
   .anxiety-row .impact {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--body);
-    line-height: 1.5;
+    line-height: 1.55;
   }
   .anxiety-row .where {
     font-size: 11px;
@@ -451,20 +453,19 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     font-weight: 400;
     font-size: 15px;
     color: var(--heading);
-    line-height: 1.55;
+    line-height: 1.6;
   }
   .touch .ctas {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
     margin-top: auto;
   }
   .touch .cta {
     font-size: 13px;
     font-weight: 400;
     color: var(--accent);
-    opacity: 0.78;
-    line-height: 1.45;
+    line-height: 1.5;
   }
   .touch .cta.upsell::before {
     content: "↗ ";
@@ -498,17 +499,18 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     font-feature-settings: "tnum";
   }
   .idea .text {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--heading);
-    line-height: 1.5;
+    line-height: 1.55;
   }
   .idea .text .name {
     font-weight: 400;
   }
   .idea .text .detail {
     color: var(--body);
-    margin-top: 4px;
-    font-size: 13px;
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.55;
   }
   .idea .pills {
     display: flex;

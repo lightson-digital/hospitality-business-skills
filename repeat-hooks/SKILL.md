@@ -159,7 +159,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
 <title>Repeat Hooks — [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --heading: #061b31;
@@ -179,13 +179,15 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
   body {
     font-family: 'Inter', -apple-system, sans-serif;
     font-weight: 300;
-    max-width: 1040px;
-    margin: 48px auto;
+    font-size: 16px;
+    max-width: 1080px;
+    margin: 40px auto;
     padding: 0 32px;
     color: var(--heading);
     background: var(--bg);
-    line-height: 1.5;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01";
   }
   .eyebrow {
     font-family: 'Inter', sans-serif;
@@ -209,8 +211,8 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     font-weight: 300;
     color: var(--body);
     margin: 0 0 56px;
-    max-width: 640px;
-    line-height: 1.45;
+    max-width: 720px;
+    line-height: 1.55;
   }
   .section-label {
     font-size: 11px;
@@ -252,9 +254,9 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
   .audit-cell .answer.yes { color: var(--yes); }
   .audit-cell .answer.no { color: var(--no); }
   .audit-cell .detail {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--body);
-    line-height: 1.45;
+    line-height: 1.55;
   }
 
   /* Lifecycle timeline */
@@ -318,19 +320,19 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     line-height: 1.4;
   }
   .milestone .body {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-style: italic;
     font-size: 15px;
     font-weight: 400;
     color: var(--heading);
-    line-height: 1.55;
+    line-height: 1.6;
   }
   .milestone .cta {
     font-size: 13px;
     font-weight: 400;
     color: var(--accent);
-    opacity: 0.78;
     margin-top: auto;
+    line-height: 1.5;
   }
 
   /* Email mockups */
@@ -367,7 +369,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     font-weight: 500;
   }
   .email .body-copy {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--body);
     line-height: 1.6;
     margin-bottom: 14px;
@@ -400,9 +402,9 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     line-height: 1.35;
   }
   .mechanic .description {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--body);
-    line-height: 1.5;
+    line-height: 1.55;
   }
   .mechanic .pills {
     display: flex;
@@ -440,10 +442,10 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
   }
   .idea:last-child { border-bottom: none; }
   .idea .text {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--heading);
     flex: 1;
-    line-height: 1.5;
+    line-height: 1.55;
   }
   .idea .effort {
     font-size: 10px;

@@ -264,10 +264,11 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Experience Pulse · [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --heading: #061b31;
@@ -281,9 +282,12 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
   * { box-sizing: border-box; }
   body {
     font-family: 'Inter', -apple-system, sans-serif;
-    max-width: 960px; margin: 48px auto; padding: 0 28px;
+    max-width: 1040px; margin: 40px auto; padding: 0 32px;
     color: var(--heading); line-height: 1.55; background: var(--bg);
     font-weight: 300;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01";
   }
   .eyebrow {
     font-size: 11px; font-weight: 500; letter-spacing: 0.18em;
@@ -293,7 +297,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     font-size: 48px; font-weight: 300; letter-spacing: -0.96px;
     margin: 0 0 6px; color: var(--heading); line-height: 1.1;
   }
-  .sub { font-size: 17px; font-weight: 300; color: var(--body); margin-bottom: 36px; }
+  .sub { font-size: 18px; font-weight: 300; color: var(--body); margin-bottom: 36px; line-height: 1.5; max-width: 780px; }
   .stamp { font-size: 12px; color: var(--body); margin-bottom: 36px; letter-spacing: 0.04em; }
 
   /* Section heading style · used at top of each bucket */
@@ -308,8 +312,9 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
 
   /* Bucket 1 · Love (pull-quotes) */
   .love-quote {
-    font-family: 'Georgia', serif; font-style: italic; font-size: 19px;
-    line-height: 1.5; color: var(--heading); padding: 6px 0 6px 22px;
+    font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 19px;
+    font-weight: 400;
+    line-height: 1.55; color: var(--heading); padding: 6px 0 6px 22px;
     border-left: 2px solid var(--accent); margin: 22px 0;
   }
   .love-quote .attribution {
@@ -323,7 +328,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     padding: 14px 0; border-bottom: 1px solid var(--border);
   }
   .hate-row:last-child { border-bottom: none; }
-  .hate-text { font-size: 15px; color: var(--heading); font-weight: 400; }
+  .hate-text { font-size: 15px; color: var(--heading); font-weight: 400; line-height: 1.5; flex: 1; }
   .freq-badge {
     font-size: 11px; padding: 3px 8px; border: 1px solid var(--border);
     border-radius: 4px; color: var(--body); white-space: nowrap; margin-left: 16px;
@@ -336,7 +341,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
   .fear-cell {
     border: 1px solid var(--border); border-radius: 6px; padding: 18px;
   }
-  .fear-anxiety { font-size: 15px; color: var(--heading); margin-bottom: 10px; line-height: 1.4; }
+  .fear-anxiety { font-size: 16px; color: var(--heading); margin-bottom: 12px; line-height: 1.5; font-weight: 400; }
   .fear-status {
     font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--label); font-weight: 500;
@@ -349,8 +354,8 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--border);
   }
   .trend-row:last-child { border-bottom: none; }
-  .trend-name { font-size: 15px; color: var(--heading); font-weight: 400; }
-  .trend-name .caption { display: block; font-size: 12px; color: var(--body); margin-top: 4px; font-weight: 300; }
+  .trend-name { font-size: 15px; color: var(--heading); font-weight: 400; line-height: 1.5; }
+  .trend-name .caption { display: block; font-size: 14px; color: var(--body); margin-top: 8px; font-weight: 300; line-height: 1.55; }
   .trend-when { font-size: 13px; color: var(--label); }
   .trend-source a { font-size: 12px; color: var(--accent); text-decoration: none; word-break: break-all; }
 
@@ -360,8 +365,8 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     border-collapse: separate; border-spacing: 0; margin: 8px 0;
   }
   .comp-table th, .comp-table td {
-    padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border);
-    font-size: 14px; vertical-align: top;
+    padding: 16px 18px; text-align: left; border-bottom: 1px solid var(--border);
+    font-size: 15px; vertical-align: top; line-height: 1.55;
   }
   .comp-table th {
     font-size: 11px; font-weight: 500; letter-spacing: 0.16em;
@@ -398,7 +403,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--label); margin-bottom: 4px;
   }
-  .rec-step { font-size: 14px; color: var(--body); line-height: 1.55; }
+  .rec-step { font-size: 15px; color: var(--heading); line-height: 1.6; }
 
   /* Sources */
   .sources { margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--border); }
