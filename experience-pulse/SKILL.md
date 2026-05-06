@@ -1,6 +1,6 @@
 ---
 name: Experience Pulse
-description: Quarterly market-research sweep across the entire public traveler-voice surface (reviews + Reddit + blogs + YouTube + comp set + industry context) for a Hawaiʻi B2C trip-experience operator. Synthesizes into 5 buckets (love / hate / fear / category-changing / comp does, you don't) and ships 3 ranked service-change recommendations. Includes a Refine interview that walks the operator through what's actually changeable vs. fixed. Output is a paste-ready markdown summary plus a Stripe-grade HTML artifact.
+description: Quarterly experience audit for a Hawaiʻi B2C trip-experience operator. Use when the user says "what should we change," "experience audit," "quarterly check," "what are travelers actually saying," "service review," "off-season planning," "what should we fix before peak." Sweeps reviews, Reddit, blogs, YouTube, comp set, and industry context. Synthesizes into 5 buckets (love / hate / fear / category-changing / comp does, you don't), ships 3 ranked service-change recommendations, and runs a Refine interview on what's changeable vs. fixed. Outputs a paste-ready markdown summary plus an HTML artifact.
 ---
 
 # Experience Pulse
@@ -572,6 +572,15 @@ This artifact will be live-demoed to a room of operators. Hold the line on these
 - **Shadow only on featured cards.** Plain `1px solid #e5edf5` border for everything else. The blue-tinted shadow `rgba(50,50,93,0.10) 0px 12px 20px 0px` is reserved for the 3 rec cards. Don't dilute it by spraying it across the page.
 
 ---
+
+## Gotchas
+
+- Reddit signal for small operators is often empty. Low signal IS itself a finding; do not fabricate threads to fill the bucket. Write "Reddit returned nothing across 6 queries in 12 months" and move on.
+- YouTube comments cluster around large vlog channels, not the operator's own channel. If you don't find comments on the operator's videos, search comments on travel-vlog videos that cover the same category and island. The comparative voice lives there.
+- Industry-context trends shift fast in Hawaiʻi (Maui post-fire sentiment, Hanauma Bay reservation system, sunscreen ban enforcement, swell calendar, vog). A trend you cite from 90 days ago may already have shifted. Date-stamp every trend and re-run quarterly; do not reuse last quarter's industry block.
+- "Comp does, you don't" is the most useful bucket for the operator and the easiest to fabricate. Pull a verbatim source for every "they do X" row. If you can't, drop the row instead of softening it.
+- Apple Maps reviews are not crawlable from standard web tools. State this and skip; do not pretend to have read them.
+- Klook is signal-rich for operators with Asia source markets and signal-empty for everyone else. Skip Klook entirely if Business Context shows no Asia source-market presence.
 
 ## Tone rules
 

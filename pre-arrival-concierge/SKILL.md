@@ -1,6 +1,6 @@
 ---
 name: Pre-Arrival Concierge
-description: Pre-arrival-stage skill for B2C Hawaiʻi trip-experience operators. Maps the upsell surface the operator is leaving on the table between booking and arrival, maps the anxieties travelers carry into show-day, then drafts a 3-touch sequence (T-7, T-1, T+0) that carries both pillars in the operator's brand voice. Recommends 3 service-flow upgrades the operator can ship into the booking flow itself. Outputs a paste-ready markdown summary above an HTML artifact built on the Lights On design system.
+description: Pre-arrival-stage skill for B2C Hawaiʻi trip-experience operators. Use when the user says "pre-arrival emails," "what to send between booking and tour day," "upsell sequence," "drip campaign for guests," "T-7 email," "show-day SMS," "we're losing add-on revenue," "no-shows are up." Maps the upsell surface the operator is leaving on the table between booking and arrival, maps anxieties travelers carry into show-day, drafts a 3-touch sequence (T-7, T-1, T+0) in operator brand voice. Recommends 3 service-flow upgrades. Outputs a paste-ready markdown summary plus an HTML artifact.
 ---
 
 # Pre-Arrival Concierge
@@ -757,6 +757,15 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
 - T-7 carries the upsell. T-1 and T+0 do not. Do not stack a hard upsell into a logistics touch, it breaks trust.
 - Never block a booking on the upsell. Easy yes, easy no, the guest can ignore it and still show up.
 - Do not fabricate. If a vector or anxiety cannot be sampled from the Business Context, say so. State the gap, do not paper over it.
+
+## Gotchas
+
+- FareHarbor's add-on field has a per-product config flag, and not every plan tier supports it. Confirm the operator's plan and that the add-on is enabled at the product level before recommending a BE-native upsell. If it's gated, the fallback is a Square or Stripe payment link in the T-7 email body.
+- Peek's add-on flow is a separate screen, not inline with checkout. Conversion drops noticeably vs. an inline FareHarbor add-on. Adjust the impact band when recommending.
+- T-7 is unreachable for last-minute bookings (cruise pax, walk-up, sub-7-day-out). The sequence needs a fallback rule: if booking date is under 7 days out, collapse T-7 into the booking confirmation. Spell this out in the operator's instructions; most BE workflows don't handle it automatically.
+- SMS in Hawaiʻi has carrier delivery quirks for international source markets (especially Japan and Korea numbers). T+0 SMS-only sequences leak no-shows for Asia-source-market guests. Use email plus SMS as belt-and-suspenders for those segments.
+- Photo-package upsell in T-7 is high-margin but only works if the operator has a photographer or GoPro stack already in place. Don't recommend the upsell vector if the operator has no photo capture; the email creates an expectation the day-of can't deliver.
+- Weather-policy language in T-1 must match the booking-engine's actual refund automation. If the BE doesn't auto-refund on cancellation, do not write "we'll refund you automatically" in the email. Match the email to the system's real behavior or the operator eats the support-ticket load.
 
 ## Anti-patterns (do not ship)
 

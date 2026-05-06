@@ -1,6 +1,6 @@
 ---
 name: Booking Edge
-description: The Book-stage teammate for Hawaiʻi tour operators. Triangulates three signals, review voice, comp-set parity, and booking-page CRO fixes, into one ranked playbook of conversion improvements. Takes a URL plus the Business Context document and tells you, in plain English, why travelers pick you (or pick someone else), and what to fix on the booking page this week.
+description: Book-stage skill for Hawaiʻi tour, lūʻau, attraction, and trip-experience operators. Use when the user says "review audit," "what are guests saying," "why aren't we converting," "fix our booking page," "comp parity," "how do we stack up," "do they pick us over [competitor]." Triangulates review voice, comp-set parity, and booking-page CRO fixes into one ranked playbook tied to verbatim quotes and real comp gaps. Outputs a paste-ready markdown summary plus an HTML artifact.
 ---
 
 # Booking Edge
@@ -47,7 +47,7 @@ The methodology layer here is `customer-research`. You are mining the guest's un
 
 #### 1a. Find the review surfaces
 
-Use web_search to locate the operator's review pages on every relevant platform. For B2C tour and attraction operators in Hawaiʻi, the surface set is:
+Locate the operator's review pages on every relevant platform. For B2C tour and attraction operators in Hawaiʻi, the surface set is:
 
 - **Google Reviews** (`[business name] reviews google`), broadest sample, walk-up and Kamaʻāina-heavy.
 - **TripAdvisor** (`[business name] tripadvisor`), mainland-visitor-heavy, longest reviews, biggest pre-trip-research traffic.
@@ -664,6 +664,15 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
 - Every CRO fix is anchored to a Signal 1 quote or a Signal 2 comp gap. No speculative fixes.
 
 ---
+
+## Gotchas
+
+- Yelp aggressively blocks scraping. If the page returns 403 or a CAPTCHA, pull the rating count from the search-result snippet and move on. Don't burn a turn trying to bypass it.
+- Viator and GetYourGuide reviews are filtered by the OTA before publication. They skew positive vs. Google. Weight Google and TripAdvisor higher when extracting negative themes.
+- TripAdvisor reviews are biased mainland-heavy, especially for Oʻahu operators. If the operator's source markets include Japan or kamaʻāina, Google Reviews carry the truer voice. Note this in the report.
+- Comp set from Business Context sometimes includes an OTA-only operator (no direct site, only a Viator listing). The booking-page CRO fixes don't apply, only the review-voice signals. Flag this and skip the comp's booking-page parity row.
+- "Tour duration stated up front" sounds trivial but is the single most common comp gap that costs Hawaiʻi tour operators bookings. If the comp shows duration and the operator doesn't, that's almost always Fix #1.
+- FareHarbor, Peek, and Bōkun all support an "above the booking button" content slot. The CRO fixes that involve adding microcopy are usually Low effort because of this. Confirm the operator's booking engine before scoring effort.
 
 ## What success looks like
 

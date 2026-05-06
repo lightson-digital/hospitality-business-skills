@@ -1,6 +1,6 @@
 ---
 name: Repeat Hooks
-description: Reconnect-stage skill for B2C Hawaiʻi trip-experience operators. Audits the post-experience flow, lays in a 4-touchpoint lifecycle drip plan (day-1, week-1, month-3, season-2), drafts 3 reactivation email starters in the operator's brand voice, and recommends 3 referral mechanics with effort and revenue bands. Outputs a paste-ready markdown summary above an HTML artifact built on the Lights On design system.
+description: Reconnect-stage skill for B2C Hawaiʻi trip-experience operators. Use when the user says "what brings them back," "post-tour emails," "reactivation," "how do we get repeat guests," "referral program," "thank-you email," "win-back," "shoulder-season comeback," "kamaʻāina rate." Audits post-experience flow, lays in a 4-touchpoint lifecycle drip (day-1, week-1, month-3, season-2), drafts 3 reactivation email starters in operator brand voice, recommends 3 referral mechanics with effort and revenue bands. Outputs a paste-ready markdown summary plus an HTML artifact.
 ---
 
 # Repeat Hooks
@@ -31,7 +31,7 @@ Both sources are adapted to a B2C trip-experience reality. The operator does not
 
 ### 1. Audit the visible post-experience touchpoints
 
-Fetch the homepage and any pages titled "Newsletter," "Sign up," "Specials," "Returning guests," "Loyalty," "Kamaʻāina," or similar. Capture four signals as yes/no plus a one-line detail:
+Walk the homepage and any pages titled "Newsletter," "Sign up," "Specials," "Returning guests," "Loyalty," "Kamaʻāina," or similar. Capture four signals as yes/no plus a one-line detail:
 
 1. **Email signup on homepage** above or below the fold. Capture the incentive if any (10% off, free guide, recipe card).
 2. **Repeat or referral program visible** anywhere in the nav, footer, or post-booking flow. Code, gift card, friend link, kamaʻāina rate that compounds.
@@ -677,6 +677,15 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
 - No fake first names ("Hi {firstName}"). Write the actual line.
 - No em dashes. Commas, periods, parentheses, colons.
 - Do not fabricate. If a touchpoint or angle cannot be sampled from the Business Context, say so. State the gap, do not paper over it.
+
+## Gotchas
+
+- Booking-engine matters for referral mechanics. FareHarbor supports gift cards natively (no extra integration). Peek requires a Shopify-style separate integration. Bōkun supports gift cards but not friend codes out of the box. Confirm the BE before recommending a mechanic; effort scoring shifts by a full band based on the engine.
+- "Returning-guest auto-rate" requires the BE to identify a guest across bookings (email match, phone match, or account). FareHarbor has a customer record; Peek does not by default. If the operator is on Peek, downgrade this mechanic to Mid effort because they need to do the lookup manually or via Mailchimp segment.
+- Kamaʻāina-only operators (heavy local repeat) leak revenue when the kamaʻāina rate isn't visible on the tour page. Surface this in the audit even though it's pre-arrival, not post-experience; the loop closes through Repeat Hooks.
+- Day-1 photo email only works if the operator captures photos. If they don't, swap Day-1 for a thank-you with a Google review link and a free recipe / trail map / harvest calendar PDF. Don't fake it.
+- Season 2 doesn't apply to operators with no seasonal variation (year-round identical product). Skip the touchpoint instead of forcing it. The lifecycle plan is 3 touchpoints in that case, not 4.
+- Mailchimp's free tier caps at 500 contacts (as of 2026). Operators above that threshold need a paid plan or a switch to Klaviyo / SendFox before the lifecycle drip can run reliably. Flag this if the audit shows the operator already has a list.
 
 ## What success looks like
 

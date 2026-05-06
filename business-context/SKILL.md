@@ -1,6 +1,6 @@
 ---
 name: Business Context
-description: Foundation skill for hospitality businesses. Takes a URL, scans the website, and produces a Business Context document that every other AI workflow reuses. Built for B2C trip-experience operators (tours, lūʻau, attractions, transportation, lodging). Produces a markdown file the owner can paste into any AI project. First draft is what the website shows. The Refine step is where the owner teaches the AI what the website does not.
+description: Foundation skill for B2C hospitality operators (tours, lūʻau, attractions, transportation, lodging). Use when the user wants to teach AI about their hospitality business, sets up a new AI project for their tour, lodging, or restaurant, or says "set up business context," "build my business profile," "who is our ideal guest," "positioning doc," "Claude project for my tour business." Takes a URL, scans the website, produces a markdown file the owner pastes into any AI project. First Draft is what the website shows. Refine is where the owner teaches the AI what the website does not.
 ---
 
 # Business Context
@@ -40,15 +40,13 @@ Then proceed.
 
 ### 1. Fetch the public surfaces
 
-Use web_fetch on the homepage. Then fetch in this order, stopping when you have enough:
+Read the homepage, then walk these surfaces in order, stopping when the questions below are answered:
 
 - About / Story / Our People page
 - Tours / Experiences / Activities / Rooms / Menu (whichever is the product index)
 - A single representative product page
 - FAQ / Policies page if linked
 - Contact page (booking flow + phone signal)
-
-If web_fetch is unavailable, web_search the business name and read the top result.
 
 ### 2. Walk the sections
 
@@ -291,6 +289,15 @@ When the user signals stop ("done," "ship it," "good enough"), regenerate the ma
 - Hawaiian diacritics correct (ʻokina, kahakō) on business and place names.
 - If a section cannot be answered from public data, write `Not visible on site. Refine to fill.` Do not fabricate.
 - During Refine, never stack questions. One at a time. Always recommend an answer before asking. Restate working answer in plain words after each turn.
+
+## Gotchas
+
+- If the operator runs Shopify, schema checks via web_fetch will miss inline JSON-LD because Shopify injects it via JavaScript post-load. Do not call schema "absent" from a static fetch alone. Recommend Google's Rich Results Test as the follow-up.
+- Squarespace and Webflow operators often have a hidden FAQ accordion that reads correctly to a browser but not to web_fetch. If the FAQ section seems empty, fetch the FAQ URL directly before declaring it missing.
+- "Pricing tier" pulled from the homepage is often misleading: many Hawaiʻi tour ops bury the kamaʻāina rate on a Specials or Locals subpage. Always check for a Locals or Kamaʻāina link before locking the tier.
+- Press logos and "as seen on" rows are routinely stale (years out of date). Treat them as proof of past credibility, not current. Confirm with the operator during Refine.
+- "Comp set" you can guess from the website is rarely the comp set the operator actually feels. The Refine step on competitors matters more than any other; the operator's gut beats the AI's pattern match every time.
+- Hawaiian diacritics in business names render inconsistently across review platforms. TripAdvisor often strips them, Google Business Profile keeps them. Treat both spellings as the same entity when you cross-reference.
 
 ## What success looks like
 

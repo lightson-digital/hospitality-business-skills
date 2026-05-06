@@ -1,6 +1,6 @@
 ---
 name: Findability Check
-description: Audit AI-search and Google visibility for a Hawaiʻi tour, attraction, or trip-experience operator. Reads the Business Context, runs 5 traveler-prompt simulations across ChatGPT/Claude/Perplexity/Gemini/Google AI Overviews, checks named-entity surface area in third-party sources, inspects schema.org JSON-LD coverage, and previews the Google snippet. Outputs a paste-ready markdown summary plus a Stripe-grade HTML artifact with 3 ranked fixes (effort × impact).
+description: Audit AI-search and Google visibility for a Hawaiʻi tour, attraction, or trip-experience operator. Use when the user says "find me on AI search," "ChatGPT visibility," "are travelers finding us," "AI Overviews check," "discoverability audit," "do we show up in ChatGPT/Claude/Perplexity/Gemini." Reads the Business Context, runs 5 traveler-prompt simulations, checks named-entity surface area in third-party sources, inspects schema.org JSON-LD, previews the Google snippet. Outputs a paste-ready markdown summary plus an HTML artifact with 3 ranked fixes (effort × impact).
 ---
 
 # Findability Check
@@ -57,9 +57,9 @@ Write the 5 prompts before you run them. Show them to the user. Adjust if a prom
 
 ### Pass 2: Run each prompt
 
-For each prompt, do a `web_search` for the prompt text. Read the top organic results, the People Also Ask boxes if visible, the AI Overview if visible, and any review-aggregator pages that show up. Then write what an LLM would synthesize from that pool.
+For each prompt, search the public web (organic results, People Also Ask, AI Overview if visible, review-aggregators), then synthesize what an LLM would likely answer from that pool.
 
-Do not invent a verbatim ChatGPT answer you didn't see. Synthesize from the actual sources. State the synthesis as: *"Based on the public web signal, an AI answering this prompt today would most likely name [X], [Y], [Z], because [reasoning]."* If the operator doesn't appear in the source pool, say so directly.
+Do not invent a verbatim ChatGPT answer you didn't see. Synthesize from the actual sources. State it as: *"Based on the public web signal, an AI answering this prompt today would most likely name [X], [Y], [Z], because [reasoning]."* If the operator doesn't appear in the source pool, say so directly.
 
 For each prompt, capture:
 
@@ -97,7 +97,7 @@ LLMs and Google both extract structured data first because it's unambiguous. For
 
 How to check it honestly:
 
-- `web_fetch` strips `<script>` tags. It cannot detect JSON-LD that's injected by a CMS plugin (Yoast, RankMath, AIOSEO, Webflow CMS embeds). Don't report "no schema" based on `web_fetch` output alone.
+- A static HTML fetch can miss JSON-LD that's injected by CMS plugins (Yoast, RankMath, AIOSEO, Webflow CMS embeds). Don't report "no schema" from a static fetch alone.
 - Use Google's Rich Results Test (`https://search.google.com/test/rich-results`) when you can. State it as: *"Rich Results Test shows X."*
 - If you can only see the raw HTML and find no JSON-LD there, write: *"No JSON-LD visible in static HTML. Plugin-injected schema may exist; recommend running Rich Results Test to confirm."* That's the honest answer.
 
@@ -105,7 +105,7 @@ For the report, list what's present, what's missing, and the one schema that wou
 
 ### Pass 5: Google snippet preview + AI bot access
 
-Run `web_search` for the exact business name. Capture:
+Search Google for the exact business name. Capture:
 
 - Title tag the snippet shows.
 - Meta description.
@@ -522,6 +522,16 @@ The skeleton:
 - Whitespace as luxury: 64px top padding, 56px between sections. Don't fill space.
 
 ---
+
+## Gotchas
+
+- AI Overviews vary by user history, location, and even hour of day. Treat the 5-prompt simulation as directional, not deterministic. State this in the report so the operator doesn't run the same prompt at home and panic when results differ.
+- Static HTML fetch misses plugin-injected JSON-LD on Yoast, RankMath, AIOSEO, Webflow, Squarespace. Always defer to Google's Rich Results Test before declaring schema missing.
+- Diacritics matter inconsistently. ChatGPT handles `Lānaʻi` and `Lanai` as the same entity; Google Business Profile usually does not. Check the brand both ways when scoring named-entity surface area.
+- TripAdvisor's "Top Things to Do in [town]" lists are heavily geo-personalized in search. The operator's rank from your IP will not match a mainland traveler's rank. Cross-reference with the operator's own GA Search Console data when possible.
+- Reddit's `r/Hawaii` is moderated against tour-operator self-promotion. A brand mentioned in `r/Hawaii` is high-trust signal; a brand absent from `r/Hawaii` is the default state for everyone, not a finding worth flagging.
+- Branded query results are heavily contaminated by OTAs (Viator, GetYourGuide, TripAdvisor). The operator may rank #1 organically and still lose direct booking volume because the OTA result is above the fold on mobile. Note OTA-vs-operator position separately.
+- `robots.txt` blocks on AI crawlers are sometimes accidental (default Yoast settings, lazy WordPress plugin). Don't assume it's intentional. Surface as a fix, not a strategy choice.
 
 ## What success looks like
 
