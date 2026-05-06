@@ -214,16 +214,18 @@ Render as a complete HTML document, inline `<style>`, no external dependencies e
 
 ### Design system (Lights On / Stripe-derived)
 
-- Font: Inter from Google Fonts. Weight 300 for display headings, 400 for UI and body
+- Font: Inter from Google Fonts. Weight 300 for display headings, 400 for UI and body, 500 for milestone labels, 600 for the eyebrow / section labels / provenance badge.
 - Heading color: `#061b31`
 - Body color: `#273951`
 - Label color: `#273951`
 - Accent: `#533afd`
 - Border default: `#e5edf5`
 - Background: `#ffffff`
-- Radii: 4 to 8px only. Never pill. Never large rounding.
+- Radii: 4 to 8px only (the provenance badge uses 999px on purpose — it's the one chip on the page).
 - Shadow: subtle blue-tinted `rgba(50,50,93,0.10) 0px 12px 20px 0px` ONLY on featured cards (the 3 service-change recs and one section header). Plain `1px solid #e5edf5` border for the rest.
-- Letter-spacing: tighten at display sizes (e.g. -0.96px at 48px headline, -0.64px at 32px section heads)
+- Letter-spacing: tighten at display sizes (e.g. -1.2px at 44px headline, -0.64px at 32px section heads).
+
+**Provenance badge.** Stamp the artifact with `Powered by Lights On · ran on [YYYY-MM-DD]` immediately after the subtitle, where `[YYYY-MM-DD]` is the actual date the skill is run. Use the `.stamp` class in the template below. The `·` character is U+00B7 middle dot, single space on either side. The First Draft / Refined state, source count, and surfaces line lives below the badge in the `.meta` row.
 
 ### Layout philosophy
 
@@ -268,7 +270,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
 <title>Experience Pulse · [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --heading: #061b31;
@@ -290,15 +292,21 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     font-feature-settings: "ss01";
   }
   .eyebrow {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
   }
   h1 {
-    font-size: 48px; font-weight: 300; letter-spacing: -0.96px;
-    margin: 0 0 6px; color: var(--heading); line-height: 1.1;
+    font-size: 44px; font-weight: 300; letter-spacing: -1.2px;
+    margin: 0 0 4px; color: var(--heading); line-height: 1.1;
   }
-  .sub { font-size: 20px; font-weight: 300; color: var(--body); margin-bottom: 36px; line-height: 1.5; max-width: 780px; }
-  .stamp { font-size: 12px; color: var(--body); margin-bottom: 36px; letter-spacing: 0.04em; }
+  .sub { font-size: 20px; font-weight: 300; color: var(--body); margin-bottom: 12px; line-height: 1.5; max-width: 780px; }
+  .stamp {
+    display: inline-block; font-size: 11px; color: var(--accent);
+    background: rgba(83,58,253,0.08); border-radius: 999px;
+    padding: 4px 10px; margin-bottom: 28px; letter-spacing: 0.16em; text-transform: uppercase;
+    font-weight: 600;
+  }
+  .meta { font-size: 12px; color: var(--body); margin-bottom: 8px; letter-spacing: 0.04em; }
 
   /* Section heading style · used at top of each bucket */
   .section-head {
@@ -419,7 +427,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
   /* Footer */
   .footer {
     margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);
-    font-size: 12px; color: var(--body); text-align: center; letter-spacing: 0.04em;
+    font-size: 13px; color: #425466; text-align: center; letter-spacing: 0.04em;
   }
   .footer a { color: var(--accent); text-decoration: none; }
 
@@ -433,10 +441,11 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
 </style>
 </head>
 <body>
-  <div class="eyebrow">EXPERIENCE · QUARTERLY PULSE</div>
+  <div class="eyebrow">Experience · Quarterly Pulse</div>
   <h1>[Business Name]</h1>
   <div class="sub">What travelers say after the trip, what's shifting in the category, what comps do that you don't.</div>
-  <div class="stamp">[First Draft / Refined] · [YYYY-MM-DD] · [N] sources read across [N] surfaces</div>
+  <div class="stamp">Powered by Lights On · ran on [YYYY-MM-DD]</div>
+  <div class="meta">[First Draft / Refined] · [N] sources read across [N] surfaces</div>
 
   <!-- Bucket 1 · Love -->
   <div class="section-head"><span class="ring"></span>Travelers love</div>

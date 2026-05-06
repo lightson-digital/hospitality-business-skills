@@ -172,6 +172,8 @@ A self-contained HTML file. Inter from Google Fonts. Stripe-derived design syste
 
 Render the 5 prompts as a stack of cards. Render the 3 fixes as a numbered ranked list with effort/impact pills. Render the Google snippet preview as a faux-Google card. Render the schema check as a 2-column "present / missing" list.
 
+**Provenance badge.** Stamp the artifact with `Powered by Lights On · ran on [YYYY-MM-DD]` immediately after the subtitle/lede, where `[YYYY-MM-DD]` is the actual date the skill is run. Use the `.stamp` class in the template below. The `·` character is U+00B7 middle dot, with single spaces on either side. Never an em dash, never a hyphen.
+
 The skeleton:
 
 ```html
@@ -180,10 +182,10 @@ The skeleton:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Findability Check, [Business Name]</title>
+<title>Findability Check · [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Serif+4:ital,wght@1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --heading: #061b31;
@@ -215,17 +217,28 @@ The skeleton:
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 1040px; margin: 0 auto; padding: 64px 32px 96px; }
+  .stamp {
+    display: inline-block;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(83,58,253,0.08);
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
   .eyebrow {
-    font-size: 12px; font-weight: 400; letter-spacing: 0.14em;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--accent);
-    margin: 0 0 14px;
+    margin: 0 0 8px;
   }
   h1 {
     font-family: 'Inter', sans-serif; font-weight: 300;
-    font-size: 48px; line-height: 1.10; letter-spacing: -0.96px;
-    color: var(--heading); margin: 0 0 12px;
+    font-size: 44px; line-height: 1.10; letter-spacing: -1.2px;
+    color: var(--heading); margin: 0 0 4px;
   }
-  .lede { font-size: 20px; font-weight: 300; color: var(--body); margin: 0 0 48px; max-width: 640px; line-height: 1.5; }
+  .lede { font-size: 20px; font-weight: 300; color: var(--body); margin: 0 0 12px; max-width: 640px; line-height: 1.5; }
   h2 {
     font-family: 'Inter', sans-serif; font-weight: 300;
     font-size: 26px; line-height: 1.12; letter-spacing: -0.26px;
@@ -349,7 +362,7 @@ The skeleton:
     margin-top: 72px; padding-top: 24px;
     border-top: 1px solid var(--border);
     display: flex; justify-content: space-between; align-items: center;
-    font-size: 12px; color: var(--body);
+    font-size: 13px; color: #425466;
   }
   .footer a { color: var(--accent); text-decoration: none; }
   .footer a:hover { text-decoration: underline; }
@@ -374,6 +387,7 @@ The skeleton:
   <p class="eyebrow">Discover · Findability Check</p>
   <h1>[Business Name]</h1>
   <p class="lede">[Category] on [Island/Region]. Are travelers finding you when they ask an AI?</p>
+  <span class="stamp">Powered by Lights On · ran on [YYYY-MM-DD]</span>
 
   <h2>What travelers asked, what AI answered</h2>
   <p class="section-meta">5 prompts a real traveler would type. Synthesized from public web signal.</p>

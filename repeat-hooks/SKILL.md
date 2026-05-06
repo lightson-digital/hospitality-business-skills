@@ -148,7 +148,9 @@ Above the HTML artifact, emit a markdown block the operator can paste directly i
 
 ### Part 2, HTML artifact
 
-Self-contained HTML, Lights On design system. Inter from Google Fonts (300 display, 400 UI). Heading `#061b31`, body `#273951`, label `#273951`, accent `#533afd`, border `#e5edf5`, white background. Radii 4–8px. Subtle blue-tinted shadows ONLY on the lifecycle timeline cards (the design hook). Plain border for everything else.
+Self-contained HTML, Lights On design system. Inter from Google Fonts (300 display, 400 UI, 500 for milestone labels, 600 for the eyebrow / section labels / provenance badge). Source Serif 4 from Google Fonts for the email body pull-quotes. Heading `#061b31`, body `#273951`, label `#273951`, accent `#533afd`, border `#e5edf5`, white background. Radii 4–8px (999px only on the provenance badge chip). Subtle blue-tinted shadow `rgba(50,50,93,0.10) 0px 12px 20px 0px` ONLY on the lifecycle timeline cards (the design hook). Plain border for everything else.
+
+**Provenance badge.** Stamp the artifact with `Powered by Lights On · ran on [YYYY-MM-DD]` immediately after the deck/subtitle, where `[YYYY-MM-DD]` is the actual date the skill is run. Use the `.stamp` class in the template below. The `·` character is U+00B7 middle dot, single space on either side.
 
 ```html
 <!DOCTYPE html>
@@ -156,10 +158,10 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Repeat Hooks, [Business Name]</title>
+<title>Repeat Hooks · [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --heading: #061b31;
@@ -173,7 +175,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     --surface: #fefefe;
     --yes: #108c3d;
     --no: #ea2261;
-    --shadow-card: rgba(50,50,93,0.12) 0px 18px 28px -22px, rgba(0,0,0,0.06) 0px 10px 18px -12px;
+    --shadow-card: rgba(50,50,93,0.10) 0px 12px 20px 0px;
   }
   * { box-sizing: border-box; }
   body {
@@ -189,37 +191,49 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "ss01";
   }
+  .stamp {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(83,58,253,0.08);
+    border-radius: 999px;
+    padding: 4px 10px;
+    margin-bottom: 28px;
+  }
   .eyebrow {
     font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
   h1 {
     font-size: 44px;
     font-weight: 300;
-    letter-spacing: -1.1px;
+    letter-spacing: -1.2px;
     line-height: 1.05;
-    margin: 0 0 8px;
+    margin: 0 0 4px;
     color: var(--heading);
   }
   .deck {
     font-size: 20px;
     font-weight: 300;
     color: var(--body);
-    margin: 0 0 56px;
+    margin: 0 0 12px;
     max-width: 720px;
     line-height: 1.55;
   }
   .section-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--label);
+    color: var(--accent);
     margin-bottom: 18px;
   }
   .section { margin-bottom: 64px; }
@@ -461,8 +475,8 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     margin-top: 64px;
     padding-top: 24px;
     border-top: 1px solid var(--border);
-    font-size: 12px;
-    color: var(--body);
+    font-size: 13px;
+    color: #425466;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -489,6 +503,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
   <div class="eyebrow">Reconnect · Repeat Hooks</div>
   <h1>[Business Name]</h1>
   <p class="deck">After the tour ends, what brings them back? A four-touchpoint plan, three reactivation starters, and three referral mechanics, drafted in [Business Name]'s voice.</p>
+  <span class="stamp">Powered by Lights On · ran on [YYYY-MM-DD]</span>
 
   <!-- Section 1: Touchpoint audit -->
   <div class="section">

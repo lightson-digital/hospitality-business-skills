@@ -176,7 +176,9 @@ Above the HTML artifact, emit a markdown block the operator can paste directly i
 
 ### Part 2, HTML artifact
 
-Self-contained HTML, Lights On design system. Inter from Google Fonts (300 display, 400 UI; no 600/700). Source Serif 4 from Google Fonts for the email body pull-quotes. Heading `#061b31`, body `#273951`, label `#273951`, accent `#533afd`, border `#e5edf5`, white background. Radii 4–8px. Subtle blue-tinted shadows ONLY on the T-7 envelope card (the design centerpiece of the sequence) and on the upsell-map row containers. Plain border for everything else. `tnum` on numbers. `font-feature-settings: "ss01"` on Inter where supported.
+Self-contained HTML, Lights On design system. Inter from Google Fonts (300 display, 400 UI, 500 for milestone labels, 600 for the eyebrow / section labels / provenance badge). Source Serif 4 from Google Fonts for the email body pull-quotes. Heading `#061b31`, body `#273951`, label `#273951`, accent `#533afd`, border `#e5edf5`, white background. Radii 4–8px (999px only on the provenance badge chip). Subtle blue-tinted shadows ONLY on the T-7 envelope card (the design centerpiece of the sequence) and on the upsell-map row containers. Plain border for everything else. `tnum` on numbers. `font-feature-settings: "ss01"` on Inter where supported.
+
+**Provenance badge.** Stamp the artifact with `Powered by Lights On · ran on [YYYY-MM-DD]` immediately after the deck/subtitle, where `[YYYY-MM-DD]` is the actual date the skill is run. Use the `.stamp` class in the template below. The `·` character is U+00B7 middle dot, single space on either side.
 
 The **upsell map** is the visual centerpiece of the artifact, because it is the revenue pillar. It is a vertical stack of 5 row-cards. Each row-card has the vector name on the left, a one-line what + where, an impact label, an effort label, and a copy-hook line. Use a quiet purple accent dot on each row to signal the revenue pillar.
 
@@ -192,10 +194,10 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pre-Arrival Concierge, [Business Name]</title>
+<title>Pre-Arrival Concierge · [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --heading: #061b31;
@@ -224,36 +226,48 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
-  .eyebrow {
+  .stamp {
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(83,58,253,0.08);
+  }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
   h1 {
     font-size: 44px;
     font-weight: 300;
-    letter-spacing: -1.1px;
+    letter-spacing: -1.2px;
     line-height: 1.05;
-    margin: 0 0 8px;
+    margin: 0 0 4px;
     color: var(--heading);
   }
   .deck {
     font-size: 20px;
     font-weight: 300;
     color: var(--body);
-    margin: 0 0 56px;
+    margin: 0 0 12px;
     max-width: 760px;
     line-height: 1.55;
   }
   .section-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--label);
+    color: var(--accent);
     margin-bottom: 18px;
     display: flex;
     align-items: baseline;
@@ -539,8 +553,8 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     margin-top: 64px;
     padding-top: 24px;
     border-top: 1px solid var(--border);
-    font-size: 12px;
-    color: var(--body);
+    font-size: 13px;
+    color: #425466;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -571,6 +585,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
   <div class="eyebrow">Pre-arrival · Concierge</div>
   <h1>[Business Name]</h1>
   <p class="deck">Between the booking and the show day, two things matter. The dollars left on the table, and the anxieties that drive a refund request. A 3-touch sequence (T-7, T-1, T+0) carries both.</p>
+  <span class="stamp">Powered by Lights On · ran on [YYYY-MM-DD]</span>
 
   <!-- Section 1: Upsell map (revenue pillar, design centerpiece) -->
   <div class="section">

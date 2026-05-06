@@ -213,7 +213,9 @@ Emit this block above the HTML artifact. Roughly 14 lines. The operator pastes i
 
 ### HTML artifact (self-contained)
 
-The HTML below is the canonical layout. Three clearly labeled sections so the audience sees the triangulation visually. Inter from Google Fonts (300 display, 400 UI, no 600/700). Source Serif 4 from Google Fonts as the serif companion for the verbatim pull-quotes. Heading `#061b31`, body `#273951`, label `#273951`, accent `#533afd`. Border `#e5edf5`. White background. Radii 4–8px. Subtle blue-tinted shadows ONLY on featured cards (rgba(50,50,93,0.10) at 0px 12px 20px 0px). Plain border for everything else. No gradient text. No glassmorphism. No pill-shaped tags. No hero-metric chrome.
+The HTML below is the canonical layout. Three clearly labeled sections so the audience sees the triangulation visually. Inter from Google Fonts (300 display, 400 UI, 600 for labels and badges). Source Serif 4 from Google Fonts as the serif companion for the verbatim pull-quotes. Heading `#061b31`, body `#273951`, label `#273951`, accent `#533afd`. Border `#e5edf5`. White background. Radii 4–8px (999px only on the provenance badge chip). Subtle blue-tinted shadows ONLY on featured cards (rgba(50,50,93,0.10) at 0px 12px 20px 0px). Plain border for everything else. No gradient text. No glassmorphism. No pill-shaped tags. No hero-metric chrome.
+
+**Provenance badge.** Stamp the artifact with `Powered by Lights On · ran on [YYYY-MM-DD]` immediately after the subtitle, where `[YYYY-MM-DD]` is the actual date the skill is run. Use the `.stamp` class in the template below. The `·` character is U+00B7 middle dot, single space on either side.
 
 Replace bracketed placeholders with the operator's actual data. Do not strip diacritics. Do not soften negative quotes.
 
@@ -223,10 +225,10 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booking Edge, [Business Name]</title>
+<title>Booking Edge · [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --heading: #061b31;
@@ -258,40 +260,49 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     font-feature-settings: "ss01";
     -webkit-font-smoothing: antialiased;
   }
-  .eyebrow {
+  .stamp {
+    display: inline-block;
     font-size: 11px;
-    font-weight: 400;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(83,58,253,0.08);
+    border-radius: 999px;
+    padding: 4px 10px;
+    margin-bottom: 28px;
+  }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   h1 {
-    font-size: 40px;
+    font-size: 44px;
     font-weight: 300;
-    letter-spacing: -0.8px;
+    letter-spacing: -1.2px;
     line-height: 1.1;
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     color: var(--heading);
   }
   .sub {
     font-size: 20px;
     font-weight: 300;
     color: var(--body);
-    margin-bottom: 36px;
+    margin-bottom: 12px;
     max-width: 720px;
     line-height: 1.5;
   }
   .section-label {
     display: inline-block;
-    font-size: 10px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 600;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--accent);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 4px 8px;
     margin-bottom: 14px;
   }
   h2 {
@@ -516,8 +527,8 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
   }
   .footer {
     margin-top: 40px;
-    font-size: 12px;
-    color: var(--body);
+    font-size: 13px;
+    color: #425466;
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid var(--border);
@@ -540,6 +551,7 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
   <div class="eyebrow">Book · Booking Edge</div>
   <h1>[Business Name]</h1>
   <div class="sub">Three signals, one playbook. What guests say, how you stack up against [Comp 1] and [Comp 2], and what to fix on the booking page this week.</div>
+  <div class="stamp">Powered by Lights On · ran on [YYYY-MM-DD]</div>
 
   <div class="platforms">
     <div class="platform"><div class="name">Google</div><div class="rating">[4.7]</div><div class="count">[N] reviews</div></div>
