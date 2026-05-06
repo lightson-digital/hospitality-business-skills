@@ -76,9 +76,9 @@ If a touchpoint cannot be reasonably drafted because the Business Context does n
 
 These are standalone, sent ad-hoc by the operator on top of the lifecycle drip. Each targets a different angle:
 
-- **Email 1 — Different season.** "It's [shoulder season] now. Here's what's different about [their tour] this time of year." Lead with the specific seasonal change (mango is in, the swell drops, the goat-cheese pizza is back). CTA: book a return trip at the kamaʻāina or returning-guest rate.
-- **Email 2 — Different product cross-sell.** "You did [Tour A]. Most of our [Tour A] guests loved [Tour B]. Here's why." If portfolio is single-product, swap this for a "different traveler in the household" angle ("anniversary coming up?").
-- **Email 3 — Referral nudge.** "Know someone planning a Hawaiʻi trip? Here's the gift card or friend code." Use the operator's actual referral mechanic if they have one. If they do not, use the recommended mechanic from Section 5.
+- **Email 1, Different season.** "It's [shoulder season] now. Here's what's different about [their tour] this time of year." Lead with the specific seasonal change (mango is in, the swell drops, the goat-cheese pizza is back). CTA: book a return trip at the kamaʻāina or returning-guest rate.
+- **Email 2, Different product cross-sell.** "You did [Tour A]. Most of our [Tour A] guests loved [Tour B]. Here's why." If portfolio is single-product, swap this for a "different traveler in the household" angle ("anniversary coming up?").
+- **Email 3, Referral nudge.** "Know someone planning a Hawaiʻi trip? Here's the gift card or friend code." Use the operator's actual referral mechanic if they have one. If they do not, use the recommended mechanic from Section 5.
 
 Each email is short. Subject under 60 chars. Body 2–3 sentences. One CTA.
 
@@ -116,17 +116,17 @@ Three is enough. Each gets one line plus an effort tag (Low / Mid).
 
 Two parts, in this order. Both are required.
 
-### Part 1 — Paste-ready markdown summary
+### Part 1, Paste-ready markdown summary
 
 Above the HTML artifact, emit a markdown block the operator can paste directly into their AI project memory (Claude Project knowledge, ChatGPT custom instructions, internal Notion, etc.). Roughly 12–15 lines. Format:
 
 ```markdown
-## Repeat Hooks — [Business Name] (paste into your AI project memory)
+## Repeat Hooks, [Business Name] (paste into your AI project memory)
 
 **Touchpoint audit (current state):**
 - Email signup: [Yes / No, with detail]
 - Repeat / referral program: [Yes / No, with detail]
-- Active blog or newsletter: [Yes — last post date / No]
+- Active blog or newsletter: [Yes, last post date / No]
 - GBP posts in last 30 days: [Yes / No]
 
 **Lifecycle drip plan (4 touchpoints):**
@@ -136,19 +136,19 @@ Above the HTML artifact, emit a markdown block the operator can paste directly i
 - Season 2: [one-line summary]
 
 **3 reactivation email subjects (in [Business Name]'s voice):**
-1. [Subject — different season]
-2. [Subject — different product or different-traveler cross-sell]
-3. [Subject — referral nudge]
+1. [Subject, different season]
+2. [Subject, different product or different-traveler cross-sell]
+3. [Subject, referral nudge]
 
 **3 referral mechanics (effort × revenue):**
-1. [Mechanic name] — [Low/Mid/High effort × Low/Mid/High revenue band]
-2. [Mechanic name] — [...]
-3. [Mechanic name] — [...]
+1. [Mechanic name], [Low/Mid/High effort × Low/Mid/High revenue band]
+2. [Mechanic name], [...]
+3. [Mechanic name], [...]
 ```
 
-### Part 2 — HTML artifact
+### Part 2, HTML artifact
 
-Self-contained HTML, Lights On design system. Inter from Google Fonts (300 display, 400 UI). Heading `#061b31`, body `#64748d`, label `#273951`, accent `#533afd`, border `#e5edf5`, white background. Radii 4–8px. Subtle blue-tinted shadows ONLY on the lifecycle timeline cards (the design hook). Plain border for everything else.
+Self-contained HTML, Lights On design system. Inter from Google Fonts (300 display, 400 UI). Heading `#061b31`, body `#273951`, label `#273951`, accent `#533afd`, border `#e5edf5`, white background. Radii 4–8px. Subtle blue-tinted shadows ONLY on the lifecycle timeline cards (the design hook). Plain border for everything else.
 
 ```html
 <!DOCTYPE html>
@@ -156,14 +156,14 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Repeat Hooks — [Business Name]</title>
+<title>Repeat Hooks, [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --heading: #061b31;
-    --body: #64748d;
+    --body: #273951;
     --label: #273951;
     --accent: #533afd;
     --accent-soft: rgba(83, 58, 253, 0.08);
@@ -179,7 +179,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
   body {
     font-family: 'Inter', -apple-system, sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 17px;
     max-width: 1080px;
     margin: 40px auto;
     padding: 0 32px;
@@ -207,7 +207,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     color: var(--heading);
   }
   .deck {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     color: var(--body);
     margin: 0 0 56px;
@@ -247,14 +247,14 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     letter-spacing: 0.1em;
   }
   .audit-cell .answer {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--heading);
   }
   .audit-cell .answer.yes { color: var(--yes); }
   .audit-cell .answer.no { color: var(--no); }
   .audit-cell .detail {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--body);
     line-height: 1.55;
   }
@@ -322,7 +322,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
   .milestone .body {
     font-family: 'Source Serif 4', Georgia, serif;
     font-style: italic;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--heading);
     line-height: 1.6;
@@ -357,7 +357,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     padding: 22px 24px 20px;
   }
   .email .subject-line {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--heading);
     margin-bottom: 14px;
@@ -369,7 +369,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     font-weight: 500;
   }
   .email .body-copy {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--body);
     line-height: 1.6;
     margin-bottom: 14px;
@@ -402,7 +402,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     line-height: 1.35;
   }
   .mechanic .description {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--body);
     line-height: 1.55;
   }
@@ -442,7 +442,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
   }
   .idea:last-child { border-bottom: none; }
   .idea .text {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--heading);
     flex: 1;
     line-height: 1.55;
@@ -535,7 +535,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
         <div class="when">Week 1</div>
         <div class="card">
           <div class="subject">[Subject line]</div>
-          <div class="body">"[Body — review request and friend-seed. One ask, one CTA, in operator voice.]"</div>
+          <div class="body">"[Body, review request and friend-seed. One ask, one CTA, in operator voice.]"</div>
           <div class="cta">→ [CTA: leave a review]</div>
         </div>
       </div>
@@ -544,7 +544,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
         <div class="when">Month 3</div>
         <div class="card">
           <div class="subject">[Subject line]</div>
-          <div class="body">"[Body — different-product cross-sell or kamaʻāina rate. Specific to portfolio.]"</div>
+          <div class="body">"[Body, different-product cross-sell or kamaʻāina rate. Specific to portfolio.]"</div>
           <div class="cta">→ [CTA: book the next experience]</div>
         </div>
       </div>
@@ -553,7 +553,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
         <div class="when">Season 2</div>
         <div class="card">
           <div class="subject">[Subject line]</div>
-          <div class="body">"[Body — shoulder-season comeback (Sept–Nov or Apr–early May). Specific seasonal change: what's in season, what's different on the farm/water/island.]"</div>
+          <div class="body">"[Body, shoulder-season comeback (Sept–Nov or Apr–early May). Specific seasonal change: what's in season, what's different on the farm/water/island.]"</div>
           <div class="cta">→ [CTA: book a shoulder-season visit]</div>
         </div>
       </div>
@@ -567,7 +567,7 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
     <div class="email">
       <div class="envelope-bar">Different season</div>
       <div class="envelope-body">
-        <div class="subject-line">[Subject — under 60 chars, in operator voice]</div>
+        <div class="subject-line">[Subject, under 60 chars, in operator voice]</div>
         <div class="body-copy">[2–3 sentence body. Lead with the specific seasonal change. No template fillers, no fake first names.]</div>
         <div class="cta-link">→ [CTA] · [destination URL]</div>
       </div>

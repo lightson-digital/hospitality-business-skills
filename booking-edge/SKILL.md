@@ -1,6 +1,6 @@
 ---
 name: Booking Edge
-description: The Book-stage teammate for Hawaiʻi tour operators. Triangulates three signals — review voice, comp-set parity, and booking-page CRO fixes — into one ranked playbook of conversion improvements. Takes a URL plus the Business Context document and tells you, in plain English, why travelers pick you (or pick someone else), and what to fix on the booking page this week.
+description: The Book-stage teammate for Hawaiʻi tour operators. Triangulates three signals, review voice, comp-set parity, and booking-page CRO fixes, into one ranked playbook of conversion improvements. Takes a URL plus the Business Context document and tells you, in plain English, why travelers pick you (or pick someone else), and what to fix on the booking page this week.
 ---
 
 # Booking Edge
@@ -9,9 +9,9 @@ The Book-stage teammate. Answers the question your guest asks ten seconds before
 
 You answer it by triangulating three signals into one playbook:
 
-1. **Review voice** — what guests actually say about you after the tour.
-2. **Comp parity** — how your reviews and your booking page stack up against your direct competitors.
-3. **CRO fixes** — what to change on the booking page to widen the edge.
+1. **Review voice**, what guests actually say about you after the tour.
+2. **Comp parity**, how your reviews and your booking page stack up against your direct competitors.
+3. **CRO fixes**, what to change on the booking page to widen the edge.
 
 Three signals, one ranked list of conversion fixes. Each fix is tied to a real review quote or a real comp gap. Nothing speculative.
 
@@ -41,7 +41,7 @@ Three signals, in order. Each signal feeds the next. By the time you write the t
 
 ---
 
-### Signal 1 — Review voice (what guests actually say)
+### Signal 1, Review voice (what guests actually say)
 
 The methodology layer here is `customer-research`. You are mining the guest's unfiltered language across the platforms they actually use to vet a Hawaiʻi tour. You are not summarizing reviews. You are extracting verbatim language and surfacing the gaps between what guests ask and what the website answers.
 
@@ -49,12 +49,12 @@ The methodology layer here is `customer-research`. You are mining the guest's un
 
 Use web_search to locate the operator's review pages on every relevant platform. For B2C tour and attraction operators in Hawaiʻi, the surface set is:
 
-- **Google Reviews** (`[business name] reviews google`) — broadest sample, walk-up and Kamaʻāina-heavy.
-- **TripAdvisor** (`[business name] tripadvisor`) — mainland-visitor-heavy, longest reviews, biggest pre-trip-research traffic.
-- **Viator** and **GetYourGuide** (`[business name] viator`, `[business name] getyourguide`) — buying-intent reviews, often the OTA the booking actually happened on.
-- **Yelp** (`[business name] yelp`) — supplemental, especially if a café, retail, or attraction component is on site.
-- **Klook** — relevant if the operator targets Asia-source markets.
-- **Booking.com** or **Expedia activities** — if applicable.
+- **Google Reviews** (`[business name] reviews google`), broadest sample, walk-up and Kamaʻāina-heavy.
+- **TripAdvisor** (`[business name] tripadvisor`), mainland-visitor-heavy, longest reviews, biggest pre-trip-research traffic.
+- **Viator** and **GetYourGuide** (`[business name] viator`, `[business name] getyourguide`), buying-intent reviews, often the OTA the booking actually happened on.
+- **Yelp** (`[business name] yelp`), supplemental, especially if a café, retail, or attraction component is on site.
+- **Klook**, relevant if the operator targets Asia-source markets.
+- **Booking.com** or **Expedia activities**, if applicable.
 
 For each platform you find, capture: total review count, average rating, recent trajectory if visible, and the URL.
 
@@ -75,10 +75,10 @@ For each review, capture:
 
 Across all reviews, identify five recurring themes. For each theme:
 
-- **Theme name** — written in the operator's voice, not generic. ("Tractor-wagon ride is the unlock for kids 5–10," not "family-friendly experience.")
-- **Frequency** — "12 of 18 reviews."
-- **Sentiment** — positive, mixed, or negative.
-- **Verbatim quote** — one quote per theme, attributed to the platform it came from.
+- **Theme name**, written in the operator's voice, not generic. ("Tractor-wagon ride is the unlock for kids 5–10," not "family-friendly experience.")
+- **Frequency**, "12 of 18 reviews."
+- **Sentiment**, positive, mixed, or negative.
+- **Verbatim quote**, one quote per theme, attributed to the platform it came from.
 
 Negative themes are the gold. A theme like "tour was shorter than expected" or "ran out of mochi by 1pm" is worth ten positive reviews because it points to a specific page-level fix.
 
@@ -106,9 +106,9 @@ For Hawaiʻi specifically, also watch for:
 
 ---
 
-### Signal 2 — Comp parity (how you stack up)
+### Signal 2, Comp parity (how you stack up)
 
-The methodology layer here is `competitor-profiling`. You are not building full competitor profiles. You are doing a focused parity sweep: same review surfaces, lighter sample, two outputs — the themes you own, and the themes they own that you don't.
+The methodology layer here is `competitor-profiling`. You are not building full competitor profiles. You are doing a focused parity sweep: same review surfaces, lighter sample, two outputs, the themes you own, and the themes they own that you don't.
 
 #### 2a. Pull the comp set from Business Context
 
@@ -130,8 +130,8 @@ For Hawaiʻi tour ops specifically, also note from the comp's booking pages:
 
 Two columns:
 
-- **Themes you own** — themes that show up in your reviews and don't show up in theirs. (Example: "Family farm story / 4 generations" shows in Kahuku Farms reviews; doesn't show in Dole Plantation reviews. Big positioning moat.)
-- **Themes they own that you don't** — themes that show up in their reviews and don't show up in yours. (Example: "Clear weather policy on booking page" or "Tour duration stated.")
+- **Themes you own**, themes that show up in your reviews and don't show up in theirs. (Example: "Family farm story / 4 generations" shows in Kahuku Farms reviews; doesn't show in Dole Plantation reviews. Big positioning moat.)
+- **Themes they own that you don't**, themes that show up in their reviews and don't show up in yours. (Example: "Clear weather policy on booking page" or "Tour duration stated.")
 
 The themes-they-own column is where the CRO fixes live. The themes-you-own column tells the operator what to amplify on the booking page hero.
 
@@ -139,7 +139,7 @@ Be honest. Don't soften the gaps. The point of the parity diff is to show the op
 
 ---
 
-### Signal 3 — CRO fixes (the playbook)
+### Signal 3, CRO fixes (the playbook)
 
 The methodology layer here is `page-cro`. You are producing three specific fixes, ranked by impact times effort. Each fix has to tie back to either a Signal 1 review quote, a Signal 2 comp gap, or both. No speculative fixes. No "best practice" generic suggestions.
 
@@ -147,11 +147,11 @@ The methodology layer here is `page-cro`. You are producing three specific fixes
 
 For each fix:
 
-- **What** — the specific change. ("Add a 'How long is the tour?' answer above the booking button on the Tour page.")
-- **Why** — the evidence. Quote the review or name the comp gap. ("Three TripAdvisor reviews ask about tour duration. Lokoea Farms shows duration on its booking page; Kahuku Farms doesn't.")
-- **Where** — the specific page and section. ("Tour page, between the hero and the FareHarbor button.")
-- **Impact band** — High / Medium / Low. High means the fix likely moves direct-booking conversion measurably. Low means a polish item.
-- **Effort band** — Low / Medium / High. Low is a copy change. High is a booking-flow rebuild.
+- **What**, the specific change. ("Add a 'How long is the tour?' answer above the booking button on the Tour page.")
+- **Why**, the evidence. Quote the review or name the comp gap. ("Three TripAdvisor reviews ask about tour duration. Lokoea Farms shows duration on its booking page; Kahuku Farms doesn't.")
+- **Where**, the specific page and section. ("Tour page, between the hero and the FareHarbor button.")
+- **Impact band**, High / Medium / Low. High means the fix likely moves direct-booking conversion measurably. Low means a polish item.
+- **Effort band**, Low / Medium / High. Low is a copy change. High is a booking-flow rebuild.
 
 #### 3b. Rank the fixes
 
@@ -184,7 +184,7 @@ You emit two artifacts in the response, in this order:
 Emit this block above the HTML artifact. Roughly 14 lines. The operator pastes it into Claude Project knowledge, ChatGPT custom instructions, or any AI workspace.
 
 ````markdown
-## Booking Edge — [Business Name] (paste into your AI project memory)
+## Booking Edge, [Business Name] (paste into your AI project memory)
 
 **Rating snapshot:**
 - Google: [★ rating, N reviews]
@@ -194,9 +194,9 @@ Emit this block above the HTML artifact. Roughly 14 lines. The operator pastes i
 [Note low-volume if under 20 total.]
 
 **Top 3 review themes:**
-1. [Theme] — [frequency, sentiment]
-2. [Theme] — [frequency, sentiment]
-3. [Theme] — [frequency, sentiment]
+1. [Theme], [frequency, sentiment]
+2. [Theme], [frequency, sentiment]
+3. [Theme], [frequency, sentiment]
 
 **Top 2 FAQ gaps:**
 1. [Question]
@@ -213,7 +213,7 @@ Emit this block above the HTML artifact. Roughly 14 lines. The operator pastes i
 
 ### HTML artifact (self-contained)
 
-The HTML below is the canonical layout. Three clearly labeled sections so the audience sees the triangulation visually. Inter from Google Fonts (300 display, 400 UI, no 600/700). Source Serif 4 from Google Fonts as the serif companion for the verbatim pull-quotes. Heading `#061b31`, body `#64748d`, label `#273951`, accent `#533afd`. Border `#e5edf5`. White background. Radii 4–8px. Subtle blue-tinted shadows ONLY on featured cards (rgba(50,50,93,0.10) at 0px 12px 20px 0px). Plain border for everything else. No gradient text. No glassmorphism. No pill-shaped tags. No hero-metric chrome.
+The HTML below is the canonical layout. Three clearly labeled sections so the audience sees the triangulation visually. Inter from Google Fonts (300 display, 400 UI, no 600/700). Source Serif 4 from Google Fonts as the serif companion for the verbatim pull-quotes. Heading `#061b31`, body `#273951`, label `#273951`, accent `#533afd`. Border `#e5edf5`. White background. Radii 4–8px. Subtle blue-tinted shadows ONLY on featured cards (rgba(50,50,93,0.10) at 0px 12px 20px 0px). Plain border for everything else. No gradient text. No glassmorphism. No pill-shaped tags. No hero-metric chrome.
 
 Replace bracketed placeholders with the operator's actual data. Do not strip diacritics. Do not soften negative quotes.
 
@@ -231,7 +231,7 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
   :root {
     --heading: #061b31;
     --label: #273951;
-    --body: #64748d;
+    --body: #273951;
     --accent: #533afd;
     --border: #e5edf5;
     --border-soft: #f0f4f9;
@@ -248,7 +248,7 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
   body {
     font-family: 'Inter', -apple-system, 'SF Pro Display', sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 17px;
     max-width: 1040px;
     margin: 40px auto;
     padding: 0 32px;
@@ -275,7 +275,7 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     color: var(--heading);
   }
   .sub {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     color: var(--body);
     margin-bottom: 36px;
@@ -411,12 +411,12 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
   .gap:last-child { border-bottom: none; }
   .gap:first-child { padding-top: 4px; }
   .gap .q {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--heading);
     font-weight: 400;
   }
   .gap .a {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--body);
     margin-top: 4px;
     line-height: 1.55;
@@ -428,7 +428,7 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     gap: 24px;
   }
   .parity-col h3 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
     letter-spacing: 0.04em;
     color: var(--label);
@@ -437,7 +437,7 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     border-bottom: 1px solid var(--border);
   }
   .parity-item {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--heading);
     padding: 10px 0;
     border-bottom: 1px solid var(--border-soft);
@@ -477,7 +477,7 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     line-height: 1.35;
   }
   .fix .where {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--body);
     margin-bottom: 12px;
     line-height: 1.5;
@@ -499,7 +499,7 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     font-family: 'Source Serif 4', Georgia, serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--label);
     line-height: 1.55;
     padding: 4px 0 4px 14px;
@@ -606,7 +606,7 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
     <div class="fix">
       <div class="num">1</div>
       <div>
-        <div class="what">[Fix 1 — what to change, in the operator's voice.]</div>
+        <div class="what">[Fix 1, what to change, in the operator's voice.]</div>
         <div class="where">[Specific page and section.]</div>
         <div class="pills"><span class="pill">Impact: High</span><span class="pill">Effort: Low</span></div>
         <div class="evidence">"[Verbatim review quote OR comp gap line that justifies this fix.]"<span class="attr">[Source: reviewer / platform OR comp parity gap]</span></div>
@@ -667,8 +667,8 @@ The paste-ready markdown summary lands in their AI project memory. From that poi
 
 ## Related skills in this repo
 
-- **Business Context** — required input. Run first.
-- **Discoverability** (forthcoming) — pre-Book stage; the question is "do they find me at all?"
-- **Repeat-Visit** (forthcoming) — post-Experience stage; the question is "do they come back?"
+- **Business Context**, required input. Run first.
+- **Discoverability** (forthcoming), pre-Book stage; the question is "do they find me at all?"
+- **Repeat-Visit** (forthcoming), post-Experience stage; the question is "do they come back?"
 
 *Built with the Hospitality Business Skills teammate · github.com/lightson-digital/hospitality-business-skills*

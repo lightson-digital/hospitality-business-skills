@@ -57,7 +57,7 @@ Pull from the Business Context. Walk every revenue surface the operator already 
 For each vector, score:
 - **Easy to add to the current flow** (does the booking engine support an add-on field, or does the operator need to send a Square link).
 - **Brand-voice fit** (a kamaʻāina-led ag tour does not run a "VIP" tier; a luxury lodge does not run "Support Local").
-- **Revenue per booking lift band** — Low (under $5 average), Mid ($5–25 average), High ($25+ average). No fake precision.
+- **Revenue per booking lift band**, Low (under $5 average), Mid ($5–25 average), High ($25+ average). No fake precision.
 
 Pick the **top 5 upsell opportunities** ranked by impact × effort. Each gets a vector name, what it is in one sentence, where in the sequence it goes (T-7 vs. T-1 vs. on-arrival), and a copy hook in the operator's brand voice.
 
@@ -65,34 +65,34 @@ Pick the **top 5 upsell opportunities** ranked by impact × effort. Each gets a 
 
 Use the Business Context category to pick defaults. Override with anything the site reveals.
 
-- **Ag tour / agritourism** — café reservation + retail attachment (jam, honey, banana bread gift box) + gift box for a friend back home + group-tour upgrade.
-- **Lūʻau** — premium seating + photo / video package + lei greeting + table side.
-- **Helicopter / aviation** — private charter upgrade + duration extension + photo package + door-off upgrade.
-- **Transportation / shuttle** — premium vehicle / private + child seat included + extended hours.
-- **Lodging / boutique hotel** — room upgrade + experience credit + late-checkout + welcome amenity.
-- **Snorkel / charter / dive** — private boat upgrade + photo package + reef-safe sunscreen kit + gear quality upgrade + onboard food upgrade.
-- **Cultural tour / attraction** — guided private upgrade + retail attachment + gift the experience.
+- **Ag tour / agritourism**, café reservation + retail attachment (jam, honey, banana bread gift box) + gift box for a friend back home + group-tour upgrade.
+- **Lūʻau**, premium seating + photo / video package + lei greeting + table side.
+- **Helicopter / aviation**, private charter upgrade + duration extension + photo package + door-off upgrade.
+- **Transportation / shuttle**, premium vehicle / private + child seat included + extended hours.
+- **Lodging / boutique hotel**, room upgrade + experience credit + late-checkout + welcome amenity.
+- **Snorkel / charter / dive**, private boat upgrade + photo package + reef-safe sunscreen kit + gear quality upgrade + onboard food upgrade.
+- **Cultural tour / attraction**, guided private upgrade + retail attachment + gift the experience.
 
 ### 2. Inventory the anxiety surface
 
 Pull from the Business Context "What the trip is really for → Anxieties travelers carry into the booking" section. Add anything the site's FAQ does not currently answer well.
 
 Score each anxiety on impact:
-- **Cancellation risk** — does the anxiety drive the guest to cancel before arrival.
-- **Refund pressure** — does the guest arrive unprepared and then ask for a refund (wrong shoes, motion sickness, kids melting down).
-- **No-show rate** — does the guest just not show up because show-day logistics were unclear.
-- **Low-NPS risk** — guest shows up but the experience is a 4 instead of a 5 because of a preventable surprise.
+- **Cancellation risk**, does the anxiety drive the guest to cancel before arrival.
+- **Refund pressure**, does the guest arrive unprepared and then ask for a refund (wrong shoes, motion sickness, kids melting down).
+- **No-show rate**, does the guest just not show up because show-day logistics were unclear.
+- **Low-NPS risk**, guest shows up but the experience is a 4 instead of a 5 because of a preventable surprise.
 
 Pick **4 to 6 anxieties** that actually apply to this operator. Map each to the touch that handles it.
 
 #### Category-specific anxiety defaults
 
-- **Snorkel / charter** — sunscreen ban + reef-safe expectation + seasickness + non-swimmer policy + gear sizing + what to bring (towel, change of clothes).
-- **Lūʻau** — arrival-time and check-in window + parking + dress code + dietary accommodations + photo etiquette.
-- **Ag tour** — closed-toe shoes + sun protection + bathroom + accessibility on dirt paths + bring water + kid-readiness.
-- **Helicopter** — weight policy + weather refund / reschedule policy + motion sickness + arrival-time and ID requirements + what to wear.
-- **Transportation** — pickup window + child seat policy + luggage allowance + cell signal at pickup point.
-- **Lodging** — check-in time + parking + early-arrival luggage policy + on-property food + Wi-Fi + late-arrival.
+- **Snorkel / charter**, sunscreen ban + reef-safe expectation + seasickness + non-swimmer policy + gear sizing + what to bring (towel, change of clothes).
+- **Lūʻau**, arrival-time and check-in window + parking + dress code + dietary accommodations + photo etiquette.
+- **Ag tour**, closed-toe shoes + sun protection + bathroom + accessibility on dirt paths + bring water + kid-readiness.
+- **Helicopter**, weight policy + weather refund / reschedule policy + motion sickness + arrival-time and ID requirements + what to wear.
+- **Transportation**, pickup window + child seat policy + luggage allowance + cell signal at pickup point.
+- **Lodging**, check-in time + parking + early-arrival luggage policy + on-property food + Wi-Fi + late-arrival.
 
 ### 3. Draft the 3-touch sequence
 
@@ -100,14 +100,14 @@ Cadence:
 
 | When | Job | Trigger | Channel |
 |---|---|---|---|
-| **T-7 days** | "What to expect" — upsell window primarily, anxiety-prep secondarily. | 7 days before tour date, OR booking confirmation if booked under 7 days out. | Email (long-form). |
-| **T-1 day** | "Show-day logistics" — confirmation, expectation-setting, last-minute prep. NO upsell. | 1 day before tour date. | Email or SMS depending on what the operator has. |
-| **T+0 morning** | "We're on for today" — real-time confirmation, parking pin, weather call. NO upsell except a soft on-property mention if it's already part of the experience. | Tour-day morning, 2–4 hours before start. | SMS preferred. Email if no SMS. |
+| **T-7 days** | "What to expect", upsell window primarily, anxiety-prep secondarily. | 7 days before tour date, OR booking confirmation if booked under 7 days out. | Email (long-form). |
+| **T-1 day** | "Show-day logistics", confirmation, expectation-setting, last-minute prep. NO upsell. | 1 day before tour date. | Email or SMS depending on what the operator has. |
+| **T+0 morning** | "We're on for today", real-time confirmation, parking pin, weather call. NO upsell except a soft on-property mention if it's already part of the experience. | Tour-day morning, 2–4 hours before start. | SMS preferred. Email if no SMS. |
 
 For each touch, write:
-- **Subject line** — under 60 characters, in operator brand voice.
-- **Body** — 2–4 sentences in operator brand voice. Concrete, specific, no template fillers, no fake first names.
-- **CTAs** — T-7 gets two CTAs (one upsell to checkout, one prep link to FAQ or what-to-bring page). T-1 gets one logistics CTA. T+0 gets one logistics CTA (parking pin, day-of phone number).
+- **Subject line**, under 60 characters, in operator brand voice.
+- **Body**, 2–4 sentences in operator brand voice. Concrete, specific, no template fillers, no fake first names.
+- **CTAs**, T-7 gets two CTAs (one upsell to checkout, one prep link to FAQ or what-to-bring page). T-1 gets one logistics CTA. T+0 gets one logistics CTA (parking pin, day-of phone number).
 
 The T-7 touch is the design centerpiece of the sequence. It does the revenue work. Treat it like a lightweight upgrade modal: lead with the experience, surface ONE upsell with a clear price and a clear button, then wrap with prep and a reassurance line. Do not bury the upsell at the bottom and do not stack three.
 
@@ -120,7 +120,7 @@ The T-7 touch is the design centerpiece of the sequence. It does the revenue wor
 
 ### 4. Recommend 3 service-flow upgrades
 
-These are NOT email-only. They are changes to the post-booking flow itself — the booking engine, the SMS stack, the operator's day-of process. The point is to ship the right pre-arrival operation, not just the right pre-arrival email.
+These are NOT email-only. They are changes to the post-booking flow itself, the booking engine, the SMS stack, the operator's day-of process. The point is to ship the right pre-arrival operation, not just the right pre-arrival email.
 
 Pick 3 from this menu, choosing the ones that fit the operator's booking engine, voice, and category:
 
@@ -145,23 +145,23 @@ Each recommendation gets a one-sentence description specific to this operator, p
 
 Two parts, in this order. Both are required.
 
-### Part 1 — Paste-ready markdown summary
+### Part 1, Paste-ready markdown summary
 
 Above the HTML artifact, emit a markdown block the operator can paste directly into their AI project memory (Claude Project knowledge, ChatGPT custom instructions, internal Notion). Roughly 13–16 lines. Format:
 
 ```markdown
-## Pre-Arrival Concierge — [Business Name] (paste into your AI project memory)
+## Pre-Arrival Concierge, [Business Name] (paste into your AI project memory)
 
 **Top 3 upsell opportunities (revenue pillar):**
-1. [Vector name] — [one-line what / where in the sequence / impact band]
-2. [Vector name] — [one-line]
-3. [Vector name] — [one-line]
+1. [Vector name], [one-line what / where in the sequence / impact band]
+2. [Vector name], [one-line]
+3. [Vector name], [one-line]
 
 **Top 4 anxieties (operations pillar):**
-1. [Anxiety] — [addressed at T-?]
-2. [Anxiety] — [addressed at T-?]
-3. [Anxiety] — [addressed at T-?]
-4. [Anxiety] — [addressed at T-?]
+1. [Anxiety], [addressed at T-?]
+2. [Anxiety], [addressed at T-?]
+3. [Anxiety], [addressed at T-?]
+4. [Anxiety], [addressed at T-?]
 
 **3-touch sequence (subject lines in [Business Name]'s voice):**
 - T-7: [Subject] (upsell window + prep)
@@ -169,18 +169,18 @@ Above the HTML artifact, emit a markdown block the operator can paste directly i
 - T+0: [Subject] (we're on for today)
 
 **3 service-flow upgrades to ship:**
-1. [Upgrade name] — [Low/Mid/High effort × Low/Mid/High impact]
-2. [Upgrade name] — [...]
-3. [Upgrade name] — [...]
+1. [Upgrade name], [Low/Mid/High effort × Low/Mid/High impact]
+2. [Upgrade name], [...]
+3. [Upgrade name], [...]
 ```
 
-### Part 2 — HTML artifact
+### Part 2, HTML artifact
 
-Self-contained HTML, Lights On design system. Inter from Google Fonts (300 display, 400 UI; no 600/700). Source Serif 4 from Google Fonts for the email body pull-quotes. Heading `#061b31`, body `#64748d`, label `#273951`, accent `#533afd`, border `#e5edf5`, white background. Radii 4–8px. Subtle blue-tinted shadows ONLY on the T-7 envelope card (the design centerpiece of the sequence) and on the upsell-map row containers. Plain border for everything else. `tnum` on numbers. `font-feature-settings: "ss01"` on Inter where supported.
+Self-contained HTML, Lights On design system. Inter from Google Fonts (300 display, 400 UI; no 600/700). Source Serif 4 from Google Fonts for the email body pull-quotes. Heading `#061b31`, body `#273951`, label `#273951`, accent `#533afd`, border `#e5edf5`, white background. Radii 4–8px. Subtle blue-tinted shadows ONLY on the T-7 envelope card (the design centerpiece of the sequence) and on the upsell-map row containers. Plain border for everything else. `tnum` on numbers. `font-feature-settings: "ss01"` on Inter where supported.
 
 The **upsell map** is the visual centerpiece of the artifact, because it is the revenue pillar. It is a vertical stack of 5 row-cards. Each row-card has the vector name on the left, a one-line what + where, an impact label, an effort label, and a copy-hook line. Use a quiet purple accent dot on each row to signal the revenue pillar.
 
-The **anxiety map** is a compact 4-to-6-row table. It is intentionally lower-key than the upsell map — narrower, no per-row accent dot, no envelope shadow. The asymmetry is the design point: the upsell map carries the revenue weight, the anxiety map is operational.
+The **anxiety map** is a compact 4-to-6-row table. It is intentionally lower-key than the upsell map, narrower, no per-row accent dot, no envelope shadow. The asymmetry is the design point: the upsell map carries the revenue weight, the anxiety map is operational.
 
 The **3 touches** are a horizontal timeline ([T-7] → [T-1] → [T+0]). Each touch is an envelope card. Subject is in label-caps (Inter 11px / 500 / uppercase / 0.14em letter-spacing). Body is in Source Serif 4 italic pull-quote. CTAs are muted accent (`#533afd` at 0.78 opacity). The T-7 envelope card has a quiet "upsell window" tag in the corner to make the dual-purpose visible at a glance.
 
@@ -192,14 +192,14 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pre-Arrival Concierge — [Business Name]</title>
+<title>Pre-Arrival Concierge, [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --heading: #061b31;
-    --body: #64748d;
+    --body: #273951;
     --label: #273951;
     --accent: #533afd;
     --accent-soft: rgba(83, 58, 253, 0.08);
@@ -215,7 +215,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     font-family: 'Inter', -apple-system, sans-serif;
     font-feature-settings: "ss01";
     font-weight: 300;
-    font-size: 16px;
+    font-size: 17px;
     max-width: 1080px;
     margin: 40px auto;
     padding: 0 32px;
@@ -241,7 +241,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     color: var(--heading);
   }
   .deck {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     color: var(--body);
     margin: 0 0 56px;
@@ -268,7 +268,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
   }
   .section { margin-bottom: 64px; }
 
-  /* Upsell map — design centerpiece, revenue pillar */
+  /* Upsell map, design centerpiece, revenue pillar */
   .upsell-stack {
     display: flex;
     flex-direction: column;
@@ -299,7 +299,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     line-height: 1.4;
   }
   .upsell-row .what {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--body);
     line-height: 1.55;
   }
@@ -308,7 +308,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     margin-top: 8px;
     font-family: 'Source Serif 4', Georgia, serif;
     font-style: italic;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--label);
     line-height: 1.55;
   }
@@ -333,7 +333,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     color: var(--accent);
   }
 
-  /* Anxiety map — intentionally lower-key, operations pillar */
+  /* Anxiety map, intentionally lower-key, operations pillar */
   .anxiety-table {
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -350,13 +350,13 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
   }
   .anxiety-row:last-child { border-bottom: none; }
   .anxiety-row .name {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--heading);
     font-weight: 400;
     line-height: 1.45;
   }
   .anxiety-row .impact {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--body);
     line-height: 1.55;
   }
@@ -451,7 +451,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     font-family: 'Source Serif 4', Georgia, serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--heading);
     line-height: 1.6;
   }
@@ -499,7 +499,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
     font-feature-settings: "tnum";
   }
   .idea .text {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--heading);
     line-height: 1.55;
   }
@@ -509,7 +509,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
   .idea .text .detail {
     color: var(--body);
     margin-top: 6px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.55;
   }
   .idea .pills {
@@ -655,7 +655,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
         <div class="when">T-7 days</div>
         <div class="envelope">
           <div class="upsell-tag">Upsell window</div>
-          <div class="subject">[Subject — under 60 chars, in operator voice]</div>
+          <div class="subject">[Subject, under 60 chars, in operator voice]</div>
           <div class="pull">"[Body, 2 to 4 sentences in operator brand voice. Lead with the experience, surface ONE upsell, close with one prep line.]"</div>
           <div class="ctas">
             <div class="cta upsell">[Upsell CTA: Add the [add-on] for $X]</div>
@@ -667,7 +667,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
         <div class="marker"></div>
         <div class="when">T-1 day</div>
         <div class="envelope">
-          <div class="subject">[Subject — show-day logistics, no upsell]</div>
+          <div class="subject">[Subject, show-day logistics, no upsell]</div>
           <div class="pull">"[Body. Confirmation, expectation-setting, last-minute prep. No upsell here. Trust window is operational.]"</div>
           <div class="ctas">
             <div class="cta prep">[Logistics CTA: View your booking / parking / what to bring]</div>
@@ -678,7 +678,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
         <div class="marker"></div>
         <div class="when">T+0 morning</div>
         <div class="envelope">
-          <div class="subject">[Subject — we're on for today]</div>
+          <div class="subject">[Subject, we're on for today]</div>
           <div class="pull">"[Body. Real-time confirmation, parking pin, weather call, day-of phone number.]"</div>
           <div class="ctas">
             <div class="cta prep">[Day-of CTA: Open parking pin]</div>
@@ -739,7 +739,7 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
 - No em dashes anywhere. Commas, periods, parentheses, colons.
 - No banned words from the LOD brand-voice document (delve, leverage, utilize, holistic, seamless, world-class, elevate, unlock, etc.). Plain language, active voice, contractions.
 - Active voice. Contractions. Specific numbers and concrete examples whenever possible.
-- T-7 carries the upsell. T-1 and T+0 do not. Do not stack a hard upsell into a logistics touch — it breaks trust.
+- T-7 carries the upsell. T-1 and T+0 do not. Do not stack a hard upsell into a logistics touch, it breaks trust.
 - Never block a booking on the upsell. Easy yes, easy no, the guest can ignore it and still show up.
 - Do not fabricate. If a vector or anxiety cannot be sampled from the Business Context, say so. State the gap, do not paper over it.
 

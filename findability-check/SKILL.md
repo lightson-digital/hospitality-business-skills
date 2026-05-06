@@ -122,7 +122,7 @@ Pick the 3 highest-impact, lowest-effort fixes from the five passes. Rank them b
 
 For each fix, write:
 
-- **What.** The specific change. Concrete enough that a developer or marketing manager could do it tomorrow. Not "improve schema" — "Add `FAQPage` JSON-LD to the homepage covering 5 questions: rain/cancellation policy, mobility on the farm, kids' age range, food restrictions, parking."
+- **What.** The specific change. Concrete enough that a developer or marketing manager could do it tomorrow. Not "improve schema", "Add `FAQPage` JSON-LD to the homepage covering 5 questions: rain/cancellation policy, mobility on the farm, kids' age range, food restrictions, parking."
 - **Why.** Which prompt or which third-party gap this unlocks. Tie it to a specific traveler search.
 - **Where.** The page or asset. Homepage hero, tour page meta description, Google Business Profile, a guest-post pitch to Hawaii.com, a Reddit comment in `r/Hawaii`.
 - **Effort.** Low / Mid / High. Low = under 2 hours by a junior marketer. Mid = 1 day. High = multi-week project.
@@ -150,7 +150,7 @@ The skill emits **two things** in this order, in the same response:
 A 10-line block the operator can copy into their AI project memory. Markdown only. No HTML. Headed exactly like this:
 
 ```markdown
-## Findability Check — [Business Name] (paste into your AI project memory)
+## Findability Check, [Business Name] (paste into your AI project memory)
 
 - **5-prompt visibility:** [n] named, [n] category-only, [n] absent. Branded query: ✓/~/✗.
 - **Top competitor cited where you weren't:** [Comp 1], [Comp 2].
@@ -180,7 +180,7 @@ The skeleton:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Findability Check — [Business Name]</title>
+<title>Findability Check, [Business Name]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -188,7 +188,7 @@ The skeleton:
   :root {
     --heading: #061b31;
     --label: #273951;
-    --body: #64748d;
+    --body: #273951;
     --accent: #533afd;
     --accent-soft: #f3f1ff;
     --border: #e5edf5;
@@ -208,7 +208,7 @@ The skeleton:
     font-family: 'Inter', -apple-system, 'SF Pro Display', sans-serif;
     font-feature-settings: "ss01";
     font-weight: 300;
-    font-size: 16px;
+    font-size: 17px;
     color: var(--body);
     background: var(--surface);
     line-height: 1.55;
@@ -225,7 +225,7 @@ The skeleton:
     font-size: 48px; line-height: 1.10; letter-spacing: -0.96px;
     color: var(--heading); margin: 0 0 12px;
   }
-  .lede { font-size: 18px; font-weight: 300; color: var(--body); margin: 0 0 48px; max-width: 640px; line-height: 1.5; }
+  .lede { font-size: 20px; font-weight: 300; color: var(--body); margin: 0 0 48px; max-width: 640px; line-height: 1.5; }
   h2 {
     font-family: 'Inter', sans-serif; font-weight: 300;
     font-size: 26px; line-height: 1.12; letter-spacing: -0.26px;
@@ -253,7 +253,7 @@ The skeleton:
   .prompt-text {
     flex: 1;
     font-family: 'JetBrains Mono', 'SF Mono', monospace;
-    font-size: 15px; font-weight: 400; line-height: 1.5;
+    font-size: 16px; font-weight: 400; line-height: 1.5;
     color: var(--label);
   }
   .status {
@@ -267,7 +267,7 @@ The skeleton:
   .status.miss { background: var(--status-miss-bg); color: var(--status-miss); }
   .status .glyph { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
   .prompt-synthesis {
-    font-size: 15px; line-height: 1.6; color: var(--body); margin: 0;
+    font-size: 16px; line-height: 1.6; color: var(--body); margin: 0;
   }
   .prompt-meta {
     margin-top: 10px; font-size: 13px; color: var(--body); line-height: 1.5;
@@ -295,12 +295,12 @@ The skeleton:
   .schema-col { padding: 22px 26px; }
   .schema-col + .schema-col { border-left: 1px solid var(--border); }
   .schema-col h3 {
-    font-size: 13px; font-weight: 400; letter-spacing: 0.06em;
+    font-size: 15px; font-weight: 400; letter-spacing: 0.06em;
     text-transform: uppercase; color: var(--label); margin: 0 0 14px;
   }
   .schema-list { list-style: none; padding: 0; margin: 0; }
   .schema-list li {
-    font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    font-family: 'JetBrains Mono', monospace; font-size: 16px;
     color: var(--label); padding: 8px 0; border-bottom: 1px solid var(--border);
   }
   .schema-list li:last-child { border-bottom: none; }
@@ -325,10 +325,10 @@ The skeleton:
     color: var(--heading); margin: 0 0 10px;
   }
   .fix .why {
-    font-size: 15px; color: var(--body); margin: 0 0 14px; line-height: 1.6;
+    font-size: 16px; color: var(--body); margin: 0 0 14px; line-height: 1.6;
   }
   .fix .where {
-    font-size: 14px; color: var(--label); margin: 0 0 14px; line-height: 1.5;
+    font-size: 16px; color: var(--label); margin: 0 0 14px; line-height: 1.5;
   }
   .fix .where strong { font-weight: 400; color: var(--accent); }
   .pill-row { display: flex; gap: 8px; }

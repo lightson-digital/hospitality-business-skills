@@ -216,7 +216,7 @@ Render as a complete HTML document, inline `<style>`, no external dependencies e
 
 - Font: Inter from Google Fonts. Weight 300 for display headings, 400 for UI and body
 - Heading color: `#061b31`
-- Body color: `#64748d`
+- Body color: `#273951`
 - Label color: `#273951`
 - Accent: `#533afd`
 - Border default: `#e5edf5`
@@ -273,7 +273,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
   :root {
     --heading: #061b31;
     --label: #273951;
-    --body: #64748d;
+    --body: #273951;
     --accent: #533afd;
     --border: #e5edf5;
     --bg: #ffffff;
@@ -285,7 +285,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     max-width: 1040px; margin: 40px auto; padding: 0 32px;
     color: var(--heading); line-height: 1.55; background: var(--bg);
     font-weight: 300;
-    font-size: 16px;
+    font-size: 17px;
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "ss01";
   }
@@ -297,7 +297,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     font-size: 48px; font-weight: 300; letter-spacing: -0.96px;
     margin: 0 0 6px; color: var(--heading); line-height: 1.1;
   }
-  .sub { font-size: 18px; font-weight: 300; color: var(--body); margin-bottom: 36px; line-height: 1.5; max-width: 780px; }
+  .sub { font-size: 20px; font-weight: 300; color: var(--body); margin-bottom: 36px; line-height: 1.5; max-width: 780px; }
   .stamp { font-size: 12px; color: var(--body); margin-bottom: 36px; letter-spacing: 0.04em; }
 
   /* Section heading style · used at top of each bucket */
@@ -328,7 +328,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     padding: 14px 0; border-bottom: 1px solid var(--border);
   }
   .hate-row:last-child { border-bottom: none; }
-  .hate-text { font-size: 15px; color: var(--heading); font-weight: 400; line-height: 1.5; flex: 1; }
+  .hate-text { font-size: 16px; color: var(--heading); font-weight: 400; line-height: 1.5; flex: 1; }
   .freq-badge {
     font-size: 11px; padding: 3px 8px; border: 1px solid var(--border);
     border-radius: 4px; color: var(--body); white-space: nowrap; margin-left: 16px;
@@ -354,8 +354,8 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--border);
   }
   .trend-row:last-child { border-bottom: none; }
-  .trend-name { font-size: 15px; color: var(--heading); font-weight: 400; line-height: 1.5; }
-  .trend-name .caption { display: block; font-size: 14px; color: var(--body); margin-top: 8px; font-weight: 300; line-height: 1.55; }
+  .trend-name { font-size: 16px; color: var(--heading); font-weight: 400; line-height: 1.5; }
+  .trend-name .caption { display: block; font-size: 16px; color: var(--body); margin-top: 8px; font-weight: 300; line-height: 1.55; }
   .trend-when { font-size: 13px; color: var(--label); }
   .trend-source a { font-size: 12px; color: var(--accent); text-decoration: none; word-break: break-all; }
 
@@ -366,7 +366,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
   }
   .comp-table th, .comp-table td {
     padding: 16px 18px; text-align: left; border-bottom: 1px solid var(--border);
-    font-size: 15px; vertical-align: top; line-height: 1.55;
+    font-size: 16px; vertical-align: top; line-height: 1.55;
   }
   .comp-table th {
     font-size: 11px; font-weight: 500; letter-spacing: 0.16em;
@@ -403,7 +403,7 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
     font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--label); margin-bottom: 4px;
   }
-  .rec-step { font-size: 15px; color: var(--heading); line-height: 1.6; }
+  .rec-step { font-size: 16px; color: var(--heading); line-height: 1.6; }
 
   /* Sources */
   .sources { margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--border); }
