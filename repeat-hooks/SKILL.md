@@ -668,6 +668,30 @@ Self-contained HTML, Lights On design system. Inter from Google Fonts (300 displ
 
 ---
 
+## Phase 3 — Fact-check pass (mandatory)
+
+Run this AFTER both the paste-ready markdown summary and the HTML artifact are drafted, and BEFORE you hand them to the user. This is a quality gate, not a watermark. If a check fails, fix in place silently and re-verify. Do not add a "fact-check passed" note to the visible output.
+
+1. **URL liveness.** Pick 2 to 3 cited URLs at random from references in the deliverable (operator homepage, blog or newsletter signup page, gift-card SKU page, kamaʻāina page, GBP, CTA destinations in the email mockups). Re-fetch each via web_fetch. If any returns 404, blocked, or wrong content, drop the citation or replace with one that resolves. CTA destination URLs must resolve.
+
+2. **Quote provenance.** For every verbatim copy hook attributed to the operator's brand voice (subject lines, body lines), confirm the phrasing matches the operator's actual public copy or is a faithful paraphrase from the Business Context voice section. If you cannot verify a verbatim site phrase, mark it `(paraphrased)` or rewrite. Do not put words in the operator's mouth they have never used.
+
+3. **Number sanity.** Every percentage (lift band, attach rate), price (kamaʻāina rate, gift card SKU value, group discount), timing window (Day 1, Week 1, Month 3, Season 2), Mailchimp tier limit, GBP post cadence, must cross-check. Round numbers ending in 0 (exactly 10% off, exactly 500 contacts) are tells; if you cannot confirm a price from the operator's site, replace with a placeholder bracket `[$X]` so the operator fills it in.
+
+4. **Hawaiian diacritics.** Scan both the markdown summary and the HTML artifact for: Hawaiʻi, kamaʻāina, Lānaʻi, Hāʻena, Mālama, Lūʻau, Kalalau, Oʻahu, Lāhainā, Lēʻahi, Kīlauea, Mānoa, ʻohana. Fix any that render without diacritics. The Source Serif 4 italic email body pull-quotes need diacritic rendering verified by eye.
+
+5. **Banned-word and em-dash sweep.** Run the LOD brand-voice banned word list (delve, leverage, utilize, holistic, robust, seamless, foster, paradigm, ecosystem unless literal, elevate, empower, unlock, harness, navigate as metaphor, streamline unless specific, realm, moreover, furthermore) and an em-dash sweep over both deliverables, including subject lines and email bodies. Fix any hit. Watch especially for "VIP," "exclusive," "luxury," "premium" on a kamaʻāina-led brand; voice-violations even if not on the banned list.
+
+6. **No-fabrication rule.** Re-scan for claims that were not sourced. Audit answers must come from the actual site walk; do not assume an email signup exists if you did not see one. Touchpoint plans must respect what the Business Context says (skip Season 2 if no seasonal variation, skip cross-sell if single-product portfolio). Referral mechanic descriptions must reflect the operator's actual booking engine.
+
+7. **Internal consistency.** The markdown summary must match the HTML artifact. If the audit summary says "no email signup, no GBP posts," the audit grid in the artifact must show "No" with matching detail. If the summary lists 4 lifecycle touchpoints, the timeline must show those 4 with matching subject lines. If the summary lists 3 referral mechanics with effort/revenue bands, the mechanics grid must show the same 3 with matching pills.
+
+8. **Booking-engine fit (per-skill check).** The 4-touch lifecycle drip and 3 referral mechanics must respect the operator's actual booking-engine capability (FareHarbor / Peek / Bōkun / Rezdy / Xola / phone-only) drawn from Business Context. If they are on a phone-only flow, certain mechanics will not work: an auto-applied returning-guest discount needs guest-record matching; a friend code needs a code-issuance system; a gift card SKU needs e-commerce rails. Flag any mechanic that is gated by the engine with `(BE upgrade required)` rather than presenting it as ship-this-week. If the operator is on Peek, downgrade returning-guest auto-rate to Mid effort.
+
+If all eight checks pass, deliver. If any fail, fix and re-run the relevant check.
+
+---
+
 ## Tone rules
 
 - Email bodies in the operator's brand voice from the Business Context. If they're warm and family-led, write warm and family-led. If they're crisp and minimal, write crisp and minimal. The voice document is the source of truth.

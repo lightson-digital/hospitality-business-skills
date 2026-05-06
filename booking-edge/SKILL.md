@@ -651,6 +651,30 @@ Replace bracketed placeholders with the operator's actual data. Do not strip dia
 
 ---
 
+## Phase 3 — Fact-check pass (mandatory)
+
+Run this AFTER both the paste-ready markdown summary and the HTML artifact are drafted, and BEFORE you hand them to the user. This is a quality gate, not a watermark. If a check fails, fix in place silently and re-verify. Do not add a "fact-check passed" note to the visible output.
+
+1. **URL liveness.** Pick 2 to 3 cited URLs at random from the review platform set (Google Reviews, TripAdvisor, Viator, Yelp), the comp set (Comp 1 and Comp 2 booking pages), and the operator's own pages referenced in fixes. Re-fetch each via web_fetch. If any returns 404, blocked, CAPTCHA, or wrong content, drop the citation or replace with one that resolves. Yelp's CAPTCHA wall is expected; note it but do not invent a count.
+
+2. **Quote provenance.** For every verbatim review quote pulled into the Theme cards, the FAQ-gap section, or the evidence line under each fix, confirm the exact string appears on the cited platform. If you cannot verify within a reasonable sample (the page changed, the review was deleted, the platform blocked the fetch), mark the quote `(paraphrased)` rather than verbatim, OR drop it. The Tone rules require typos preserved; that means the verified string carries the typos too.
+
+3. **Number sanity.** Every star rating, review count, theme frequency ("12 of 18 reviews"), and comp-parity count must cross-check against the source. Round numbers (4.5 stars exactly, 100 reviews flat) deserve a second look. If you cannot confirm a number, replace with a qualitative phrase ("dozens of reviews," "consistently 4-star and above," "single-digit review count").
+
+4. **Hawaiian diacritics.** Scan both the markdown summary and the HTML artifact for: Hawaiʻi, kamaʻāina, Lānaʻi, Hāʻena, Mālama, Lūʻau, Kalalau, Oʻahu, Lāhainā, Lēʻahi, Kīlauea, Mānoa. Fix any that render without diacritics. The Source Serif 4 italic in pull-quotes still needs to render the diacritic correctly; verify by eye if the font fallback drops them.
+
+5. **Banned-word and em-dash sweep.** Run the LOD brand-voice banned word list (delve, leverage, utilize, holistic, robust, seamless, foster, paradigm, ecosystem unless literal, elevate, empower, unlock, harness, navigate as metaphor, streamline unless specific, realm, moreover, furthermore) and an em-dash sweep over both deliverables. Fix any hit. The middle dot `·` is correct; em dash is not.
+
+6. **No-fabrication rule.** Re-scan the artifact for claims that were not sourced. Every CRO fix must tie to a Signal 1 review quote or a Signal 2 comp gap; if the evidence line is generic ("best practice"), drop the fix or replace it. Themes-they-own and themes-you-own claims need verbatim source backup. If a comp is OTA-only and you skipped the booking-page parity row, the artifact must say so plainly, not paper over it.
+
+7. **Internal consistency.** The markdown summary must match the HTML artifact. If the summary says "Top 3 review themes: A, B, C," the Signal 1 cards must show those three at the top with matching frequencies and sentiments. If the summary names "Comp 1 and Comp 2," the parity diff must reference those same names. If the summary lists "3 fixes," the Signal 3 section must show 3 fixes with the same one-line headlines.
+
+8. **OTA-count freshness (per-skill check).** OTA review counts shift weekly. Stamp the rating snapshot block in the HTML artifact with the date the data was pulled (it lives in the provenance badge already; verify it matches the actual run date). Add a one-line caveat near the Platforms grid that reads: "Review counts pulled on [date]. OTA totals can shift week to week." Verify the line is present and the date is today's run date.
+
+If all eight checks pass, deliver. If any fail, fix and re-run the relevant check.
+
+---
+
 ## Tone rules
 
 - Quote reviewers verbatim. Typos, ALL CAPS, broken English, all of it. The realness is the proof.

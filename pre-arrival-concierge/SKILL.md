@@ -745,6 +745,30 @@ The **3 service-flow upgrades** are a numbered ranked list with effort and impac
 
 ---
 
+## Phase 3 — Fact-check pass (mandatory)
+
+Run this AFTER both the paste-ready markdown summary and the HTML artifact are drafted, and BEFORE you hand them to the user. This is a quality gate, not a watermark. If a check fails, fix in place silently and re-verify. Do not add a "fact-check passed" note to the visible output.
+
+1. **URL liveness.** Pick 2 to 3 cited URLs at random from references in the deliverable (operator homepage, tour pages linked from CTAs, the operator's existing café/retail/gift-card SKU page if mentioned, FAQ or what-to-bring page). Re-fetch each via web_fetch. If any returns 404, blocked, or wrong content, drop the citation or replace with one that resolves. CTA destination URLs in the email mockups must resolve.
+
+2. **Quote provenance.** For every verbatim copy hook attributed to the operator's brand voice, confirm the phrasing matches the operator's actual public copy (or is a faithful paraphrase in their voice from the Business Context). If you put a verbatim site phrase in the artifact and cannot verify it on the live site, mark it `(paraphrased)` or rewrite it. Do not put words in the operator's mouth they have never used.
+
+3. **Number sanity.** Every price ($X for the upsell, kamaʻāina rate, photo package fee), duration, attach-rate band, group size, and timing window (T-7, T-1, T+0, weather window) must cross-check. Round numbers ending in 0 ($50 photo package flat, "10–15% lift") are tells; if you cannot confirm a price from the operator's site, replace with a placeholder bracket `[$X]` so the operator fills it in.
+
+4. **Hawaiian diacritics.** Scan both the markdown summary and the HTML artifact for: Hawaiʻi, kamaʻāina, Lānaʻi, Hāʻena, Mālama, Lūʻau, Kalalau, Oʻahu, Lāhainā, Lēʻahi, Kīlauea, Mānoa. Fix any that render without diacritics. The Source Serif 4 italic email pull-quotes need diacritic rendering verified by eye.
+
+5. **Banned-word and em-dash sweep.** Run the LOD brand-voice banned word list (delve, leverage, utilize, holistic, robust, seamless, foster, paradigm, ecosystem unless literal, elevate, empower, unlock, harness, navigate as metaphor, streamline unless specific, realm, moreover, furthermore) and an em-dash sweep over both deliverables, including subject lines and email bodies. Fix any hit. Watch especially for "VIP," "exclusive," "luxury," "premium" on a kamaʻāina-led brand; those are voice-violations even if not on the banned list.
+
+6. **No-fabrication rule.** Re-scan for claims that were not sourced. The upsell map must only include vectors the operator can actually support; do not invent a "captain's table" upgrade for an ag tour. Anxieties must come from the Business Context anxiety list or from a category-specific default that fits this operator. Service-flow upgrades must be booking-engine-aware; do not recommend FareHarbor add-on fields if the operator is on Peek.
+
+7. **Internal consistency.** The markdown summary must match the HTML artifact. If the summary lists 3 upsell opportunities, the upsell map must show those exact 3 plus the 2 supporting ones. If the summary lists T-7 / T-1 / T+0 subject lines, the timeline cards must use those exact subjects. If the 4 anxieties in the summary are A/B/C/D, the anxiety table in the artifact must show those 4 (or 4 to 6, never fewer than the summary count).
+
+8. **Upsell-portfolio mapping (per-skill check).** Every recommended upsell must map to something visible in the operator's actual portfolio drawn from the Business Context (signature experiences, retail attachments, café/F&B page, photo capability, gift-card SKU, premium tier products). Cross-check that no upsell is a hypothetical product the operator does not sell. If the operator has no photographer on staff, drop the photo-package upsell. If no café exists, drop the café reservation upsell. Replace any non-mappable vector with one that fits.
+
+If all eight checks pass, deliver. If any fail, fix and re-run the relevant check.
+
+---
+
 ## Tone rules
 
 - Email bodies in the operator's brand voice from the Business Context. Family-led ag tour, family-led ag tour. Premium charter, premium charter. The brand-voice document is the source of truth.

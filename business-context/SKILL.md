@@ -283,6 +283,30 @@ When the user signals stop ("done," "ship it," "good enough"), regenerate the ma
 
 ---
 
+## Phase 3 — Fact-check pass (mandatory)
+
+Run this AFTER the markdown document is drafted and BEFORE you hand it to the user. This is a quality gate, not a watermark. If a check fails, fix in place silently and re-verify. Do not add a "fact-check passed" note to the visible artifact.
+
+1. **URL liveness.** Pick 2 to 3 cited URLs at random from the Comp Set, Press / "as seen on" row, and Source Markets section. Re-fetch each via web_fetch. If any returns 404, blocked, redirected to a parked domain, or wrong content (a Squarespace placeholder, a "this domain is for sale" page, a different business entirely), drop the citation or replace with one that resolves. Treat root-domain fetches as the primary check; a working homepage beats a broken deep link.
+
+2. **Quote provenance.** For every verbatim sentence pulled into the "Voice, sample sentence" or "Testimonials on site" sections, confirm the exact string appears on the cited page. If you cannot verify the wording within a reasonable sample, mark it `(paraphrased)` rather than verbatim, OR drop the quote entirely. Better to ship four real quotes than five with one fabricated.
+
+3. **Number sanity.** Every count, rating, percentage, dollar figure (group size cap, years in business, guest count, price band, "founded in," "as seen on") must cross-check against the source. Round numbers ending in 0 ("over 10,000 guests served") are a fabrication tell; replace with a qualitative phrase ("thousands of guests served," "decades of operation") if you cannot confirm.
+
+4. **Hawaiian diacritics.** Scan the rendered output for: Hawaiʻi (ʻokina), kamaʻāina (ʻokina + kahakō), Lānaʻi, Hāʻena, Mālama, Lūʻau (the lūʻau form), Kalalau, Oʻahu, Lāhainā, Lēʻahi, Kīlauea, Mānoa. Fix any written without diacritics. Place names in Comp Set URLs may strip them; that is fine in URLs but not in body copy.
+
+5. **Banned-word and em-dash sweep.** Run the LOD brand-voice banned word list (delve, leverage, utilize, holistic, robust, seamless, foster, paradigm, ecosystem unless literal, elevate, empower, unlock, harness, navigate as metaphor, streamline unless specific, realm, moreover, furthermore) and an em-dash sweep over the entire document. Replace em dashes with commas, periods, parentheses, or colons. Fix any banned-word hit by reaching for the operator's actual vocabulary from the Voice section.
+
+6. **No-fabrication rule.** Re-scan every section for claims that were not sourced. If a claim looks specific (a competitor's exact policy, a press headline, a podcast appearance, a specific number), verify it has a source. If not, soften to a qualitative statement or drop. The whole point of `Not visible on site. Refine to fill.` is to honor the rule; do not fill gaps with plausible guesses.
+
+7. **Internal consistency.** The summary at the top must match the body. If the Business Overview says "single-product, scheduled, max 12 pax," the Signature Experiences section must not list 5 products. If the Differentiator says "kamaʻāina-owned 4-generation farm" but the About section says nothing about ownership history, reconcile both before delivery. Cross-check operator names, URLs, pricing tier, and category language across sections.
+
+8. **Comp set sanity (per-skill check).** Verify each direct competitor name resolves to a live URL AND is genuinely a direct competitor (same category, same island/region, same trip-slot). A cliff-jump tour is not a direct competitor to a snorkel charter even if both are on Maui. If the Refine step has not yet happened, flag any comp that looks like a wrong-category lookalike with `(verify with operator)` rather than locking it in.
+
+If all eight checks pass, deliver. If any fail, fix and re-run the relevant check.
+
+---
+
 ## Tone rules
 
 - Direct, operator-friendly. No marketing fluff. No corporate filler.

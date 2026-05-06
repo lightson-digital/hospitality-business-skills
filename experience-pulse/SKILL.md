@@ -557,6 +557,30 @@ A footer-area block listing every URL the AI consulted, grouped by surface. Audi
 
 ---
 
+## Phase 3 — Fact-check pass (mandatory)
+
+Run this AFTER both the paste-ready markdown summary and the HTML artifact are drafted, and BEFORE you hand them to the user. This is a quality gate, not a watermark. If a check fails, fix in place silently and re-verify. Do not add a "fact-check passed" note to the visible output.
+
+1. **URL liveness.** Pick 2 to 3 cited URLs at random from across the surface mix (review platforms, Reddit threads, blog posts, YouTube videos, industry-context news links, comp set URLs). Re-fetch each via web_fetch. If any returns 404, blocked, paywalled error, or wrong content, drop the citation or swap with one that resolves. The Sources block at the bottom of the HTML artifact gets the same treatment; broken links there poison the evidence trail.
+
+2. **Quote provenance.** For every verbatim quote in the Love bucket, the Hate bucket, the Reddit/YouTube/blog citations, and the comp-side-by-side rows, confirm the exact string appears on the cited page. If you cannot verify within a reasonable sample, mark the quote `(paraphrased)` rather than verbatim, OR drop it. Tone rules require typos preserved; verified verbatim carries the typos.
+
+3. **Number sanity.** Every "N reviews read across N platforms," frequency badge ("12 mentions across TripAdvisor + Reddit"), date stamp on a trend, list rank, dollar figure, percentage. Round numbers (exactly 10 reviews, exactly 50% of mentions) are tells. If you cannot confirm, replace with a qualitative phrase ("a recurring pattern across multiple TripAdvisor reviews," "showed up repeatedly in Reddit threads").
+
+4. **Hawaiian diacritics.** Scan both the markdown summary and the HTML artifact for: Hawaiʻi, kamaʻāina, Lānaʻi, Hāʻena, Mālama, Lūʻau, Kalalau, Oʻahu, Lāhainā, Lēʻahi, Kīlauea, Mānoa, kuleana. Fix any that render without diacritics. The Source Serif 4 italic Love quotes need diacritic rendering verified by eye if the font fallback drops them.
+
+5. **Banned-word and em-dash sweep.** Run the LOD brand-voice banned word list (delve, leverage, utilize, holistic, robust, seamless, foster, paradigm, ecosystem unless literal, elevate, empower, unlock, harness, navigate as metaphor, streamline unless specific, realm, moreover, furthermore) and an em-dash sweep over both deliverables. Fix any hit. The middle dot `·` is correct; em dash is not.
+
+6. **No-fabrication rule.** Re-scan for claims that were not sourced. Reddit and YouTube findings must cite a real thread or video. Industry-context trends must cite a real news source from the last 90 days. If a surface returned nothing, the report must say so plainly ("Reddit returned nothing across 6 queries in 12 months"), not invent a thread. Apple Maps reviews are not crawlable from standard web tools; if you cited them, drop or rewrite.
+
+7. **Internal consistency.** The markdown summary must match the HTML artifact. If the summary's 5-bucket headlines name a peak moment, the Love bucket pull-quotes must support that headline. If the summary lists 3 service-change recs by name, the recs section in the artifact must show those exact 3 with matching effort/impact bands. If the summary cites N sources per surface, the Sources block must list at least those N.
+
+8. **Comp-claim citation (per-skill check).** Every "what comps do that you don't" row in Bucket 5 must cite a specific URL or specific page section (booking page, FAQ page, About page, a verbatim review quote naming the move). No "competitors generally do X" without a source. If you cannot pull a verbatim source for a row, drop the row instead of softening it. The asymmetry between operator's actual gap and comp's actual move is the value of the bucket; vague claims dilute it.
+
+If all eight checks pass, deliver. If any fail, fix and re-run the relevant check.
+
+---
+
 ## Anti-slop guardrails
 
 This artifact will be live-demoed to a room of operators. Hold the line on these:

@@ -502,6 +502,30 @@ The skeleton:
 
 ---
 
+## Phase 3 — Fact-check pass (mandatory)
+
+Run this AFTER both the paste-ready markdown summary and the HTML artifact are drafted, and BEFORE you hand them to the user. This is a quality gate, not a watermark. If a check fails, fix in place silently and re-verify. Do not add a "fact-check passed" note to the visible output.
+
+1. **URL liveness.** Pick 2 to 3 cited URLs at random from the third-party surface area (TripAdvisor list, Honolulu Magazine roundup, Reddit thread, YouTube video). Re-fetch each via web_fetch. If any returns 404, paywalled error, redirected to an unrelated page, or wrong content, drop the citation or swap it with one that resolves. The Google snippet preview's URL line and the operator's own homepage URL get the same treatment.
+
+2. **Quote provenance.** For each verbatim title tag, meta description, or third-party quote in the artifact, verify the exact string appears on the cited page. If you cannot verify within a reasonable sample, mark the quote `(paraphrased)` rather than verbatim, OR drop it. Synthesized AI-answer simulations are predictions, not verbatim citations, and do not need provenance, but the underlying source signals do.
+
+3. **Number sanity.** Every rating count, list rank, "top N" position, percentage, or domain-level number must cross-check. Round numbers ending in 0 ("ranked #10 on TripAdvisor") are a fabrication tell. If you cannot confirm a number, replace with a qualitative phrase ("on the first page of TripAdvisor results," "single-digit star count").
+
+4. **Hawaiian diacritics.** Scan both the markdown summary and the HTML artifact for: Hawaiʻi, kamaʻāina, Lānaʻi, Hāʻena, Mālama, Lūʻau, Kalalau, Oʻahu, Lāhainā, Lēʻahi, Kīlauea, Mānoa. Fix any that render without diacritics. Treat the diacritic and non-diacritic spelling as the same brand entity when cross-referencing third-party sources, but write the diacritic form in the deliverable.
+
+5. **Banned-word and em-dash sweep.** Run the LOD brand-voice banned word list (delve, leverage, utilize, holistic, robust, seamless, foster, paradigm, ecosystem unless literal, elevate, empower, unlock, harness, navigate as metaphor, streamline unless specific, realm, moreover, furthermore) and an em-dash sweep over the markdown summary and the HTML body. Fix any hit. The middle dot `·` is correct; em dash is not.
+
+6. **No-fabrication rule.** Re-scan the artifact for claims that were not sourced. The 5-prompt simulations should be tied to actual public-web signal, not invented competitor names. If a fix recommends "pitch Hawaii Magazine," verify Hawaii Magazine actually covers this category. If a fix lists a competitor as the comp the AI named, verify the competitor name surfaced in the underlying source pool.
+
+7. **Internal consistency.** The 10-line markdown summary must match the HTML artifact. If the summary says "3 of 5 prompts named, 2 absent," the artifact's prompt cards must show that distribution. If the summary names "[Comp 1], [Comp 2]" as top-cited competitors, the prompt cards must reference those same names. If the summary says "FAQPage missing," the schema-grid Missing column must include FAQPage.
+
+8. **AI Overview determinism caveat (per-skill check).** The 5 LLM prompt simulations are predictions, not facts. Add a one-line caveat in the artifact body, near the prompts section, that reads roughly: "AI Overviews vary by user history, location, and time. Treat these 5 simulations as directional, not deterministic." Verify the line is present in the rendered HTML and absent of em dashes.
+
+If all eight checks pass, deliver. If any fail, fix and re-run the relevant check.
+
+---
+
 ## Tone rules
 
 - Plain language. The reader is the operator, not a marketer. "Outranked by Viator on your own brand name" is fine. "Suboptimal SERP penetration" is not.
