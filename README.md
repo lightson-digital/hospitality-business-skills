@@ -59,23 +59,32 @@ Replace the skill name and the URL with your own. The AI reads the methodology, 
 
 ## How to install a skill permanently
 
-### Claude (recommended)
+### Claude native Skills (recommended)
 
-1. Create a Claude Project named "Hospitality Business Skills"
-2. Open each `SKILL.md` file in this repo, copy the full contents, paste into the Project's Custom Instructions
-3. Start a new chat in that Project, give it a URL, and run
+The most reliable way. Claude treats the `SKILL.md` as a structured procedure and executes every step, including the quality rules and the "do not fabricate" guards baked into each skill.
 
-### ChatGPT
+1. In Claude (web or desktop), open the **Customize** panel from the sidebar, click **Skills**, then click the **+** button to add a personal skill
+2. Upload the skill folder from this repo (each folder contains a `SKILL.md`, for example `findability-check/`)
+3. Repeat for each of the six skills you want installed
+4. In any new chat, mention the skill by name or paste the run prompt. Claude runs the full procedure end to end
 
-1. Create a Custom GPT (or use Custom Instructions on a paid account)
-2. Paste the contents of the `SKILL.md` you want into the instructions field
-3. Start a new chat, give it a URL, and run
+### Claude Project (alternative for context-aware runs)
 
-### Gemini
+Use this if you want all six skills tied to one workspace with your business context loaded once.
 
-1. Create a Gem
-2. Paste the `SKILL.md` contents into the Gem's instructions
-3. Start a new chat, give it a URL, and run
+1. Run the Business Context skill first to generate `business-context-{your-business}.md`
+2. Create a Claude Project named "Hospitality Business Skills"
+3. Upload `business-context-{your-business}.md` to the project's Knowledge
+4. Paste a project-level Custom Instruction that points the project at the context file (a generic version is available in the live demo at https://lightson-digital.github.io/skill-demo/)
+5. In a new chat in that project, paste the run prompt for any skill. The skill reads the business context first, then runs
+
+### ChatGPT, Gemini, and other AI assistants (works, with caveats)
+
+These platforms can read the `SKILL.md` and produce reasonable output, but they do not follow the procedure faithfully the way Claude does. Expect skipped steps, shorter output, and occasional fabrication where the skill says not to. Treat the result as a useful first draft, not a finished audit.
+
+1. **ChatGPT.** Create a Custom GPT (or paste the `SKILL.md` into Custom Instructions on a paid account), then start a chat with a URL
+2. **Gemini.** Create a Gem, paste the `SKILL.md` into the Gem's instructions, then start a chat with a URL
+3. Always verify the output against the rules in the SKILL.md, especially the "do not fabricate" sections
 
 You now own the teammate. No subscription, no platform fee, no vendor lock-in.
 
